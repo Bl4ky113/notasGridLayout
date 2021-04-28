@@ -129,6 +129,17 @@ main section ul > li:nth-child(even)::marker,
 main section ol > li:nth-child(even)::marker {
   color: #00bb00;
 }
+main section code {
+  width: 90%;
+  margin: 0.25em auto;
+  border: 0.25em solid #666;
+  border-left: 0.5em solid #008800;
+  padding: 1em;
+  background-color: #333;
+  color: white;
+  font: 600 1.2em "Roboto Mono", monospace;
+  display: block;
+}
 main section strong {
   font-weight: 700;
   color: #005500;

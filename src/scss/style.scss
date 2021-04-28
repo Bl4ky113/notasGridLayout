@@ -164,7 +164,22 @@ main {
     }
    }
   }
+  
+  code {
+   width: 90%;
 
+   margin: 0.25em auto;
+   border: 0.25em solid #666;
+   border-left: 0.5em solid $color-dark;
+   padding: 1em;
+
+   background-color: #333;
+
+   color: white;
+   font: 600 1.2em 'Roboto Mono', monospace;
+
+   display: block;
+  }
   
   strong { font-weight: 700; color: $color-darker}
 
