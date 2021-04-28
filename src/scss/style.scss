@@ -58,7 +58,7 @@ main {
    color: white;
    font: 800 2em 'Roboto', sans-serif;
    text-decoration: underline solid $color-base 0.1em;
-   text-shadow: 0.1em 0.1em 0.1em $color-dark;
+   text-shadow: 0.1em 0.1em 1px $color-dark;
   } 
 
   ol { 
@@ -74,7 +74,7 @@ main {
     &::marker {
      color: white;
      font: 800 1em 'Roboto', sans-serif;
-     text-shadow: 0.1em 0.1em 0.1em $color-dark;
+     text-shadow: 0.1em 0.1em 1px $color-dark;
     }
 
     & > a {
@@ -140,30 +140,49 @@ main {
 
    color: black;
    font: 500 1em 'Roboto', sans-serif;
-
-   strong { font-weight: 700; color: $color-darker}
-
-   em { font-weight: 500;}
-
-   i { font-weight: 400;}
-
-   abbr { 
-    border-radius: 0.2em;
-    padding: 0.1em 0.2em;
-
-    background-color: $color-light;
-
-    font-weight: 600;
-    text-decoration: underline solid $color-dark 0.1em;
-   }
-
-   mark {background-color: rgba($color: $color-lighter, $alpha: 0.5);}
   }
  
   ul,
   ol {
-   
+   margin-left: 1em;
+   border-left: 0.25em dashed $color-base;
+   padding: 0.25em 1.5em;
+
+   list-style-type: square;
+   list-style-position: inside;
+
+   & > li {
+    color: black;
+    font: 500 1em 'Roboto', sans-serif;
+
+    &:nth-child(odd){
+     &::marker {color: $color-light;}
+    }
+
+    &:nth-child(even){
+     &::marker {color: $color-base;}
+    }
+   }
   }
+
+  
+  strong { font-weight: 700; color: $color-darker}
+
+  em { font-weight: 500;}
+
+  i { font-weight: 400;}
+
+  abbr { 
+   border-radius: 0.2em;
+   padding: 0.1em 0.2em;
+
+   background-color: $color-light;
+
+   font-weight: 600;
+   text-decoration: underline solid $color-dark 0.1em;
+  }
+
+  mark {background-color: rgba($color: $color-lighter, $alpha: 0.5);}
  }
 
 }

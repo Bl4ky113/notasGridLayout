@@ -45,7 +45,7 @@ main nav > h2 {
   color: white;
   font: 800 2em "Roboto", sans-serif;
   text-decoration: underline solid #00bb00 0.1em;
-  text-shadow: 0.1em 0.1em 0.1em #008800;
+  text-shadow: 0.1em 0.1em 1px #008800;
 }
 main nav ol {
   margin-left: 1em;
@@ -59,7 +59,7 @@ main nav ol > li {
 main nav ol > li::marker {
   color: white;
   font: 800 1em "Roboto", sans-serif;
-  text-shadow: 0.1em 0.1em 0.1em #008800;
+  text-shadow: 0.1em 0.1em 1px #008800;
 }
 main nav ol > li > a {
   color: #005500;
@@ -108,23 +108,44 @@ main section p {
   color: black;
   font: 500 1em "Roboto", sans-serif;
 }
-main section p strong {
+main section ul,
+main section ol {
+  margin-left: 1em;
+  border-left: 0.25em dashed #00bb00;
+  padding: 0.25em 1.5em;
+  list-style-type: square;
+  list-style-position: inside;
+}
+main section ul > li,
+main section ol > li {
+  color: black;
+  font: 500 1em "Roboto", sans-serif;
+}
+main section ul > li:nth-child(odd)::marker,
+main section ol > li:nth-child(odd)::marker {
+  color: #00ee00;
+}
+main section ul > li:nth-child(even)::marker,
+main section ol > li:nth-child(even)::marker {
+  color: #00bb00;
+}
+main section strong {
   font-weight: 700;
   color: #005500;
 }
-main section p em {
+main section em {
   font-weight: 500;
 }
-main section p i {
+main section i {
   font-weight: 400;
 }
-main section p abbr {
+main section abbr {
   border-radius: 0.2em;
   padding: 0.1em 0.2em;
   background-color: #00ee00;
   font-weight: 600;
   text-decoration: underline solid #008800 0.1em;
 }
-main section p mark {
+main section mark {
   background-color: rgba(121, 255, 121, 0.5);
 }
