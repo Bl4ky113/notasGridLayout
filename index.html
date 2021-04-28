@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <link rel="stylesheet" href="./src/css/style.css">
+   <link rel="stylesheet" href="./src/css/grid-tests.css">
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +30,16 @@
                <li><a href="#QueEsGrid-Terminologia_Cell">Grid Cell</a></li>
                <li><a href="#QueEsGrid-Terminologia_Track">Grid Track</a></li>
                <li><a href="#QueEsGrid-Terminologia_Area">Grid Area</a></li>
+            </ol>
+         </ol>
+         <h2>Pruebas de Grid</h2>
+         <ol>
+            <li><a href="#PruebasGrid-PrimeraPrueba">Primera Prueba</a></li>
+            <ol>
+               <li><a href="#PruebasGrid-PrimeraPrueba_Columnas">Columnas</a></li>
+               <li><a href="#PruebasGrid-PrimeraPrueba_FilasColumnas">Filas y Columnas</a></li>
+               <li><a href="#PruebasGrid-PrimeraPrueba_EspaciadoElementos">Espaciado Elementos</a></li>
+               <li><a href="#PruebasGrid-PrimeraPrueba_FraccionesGrid">Fracciones en Grid</a></li>
             </ol>
          </ol>
       </nav>
@@ -126,7 +137,153 @@
          <p>
             Es el espacio que hay entre varios <em>Grid Cell</em>s
          </p>
+      </section>
 
+      <section>
+         <h3 id="PruebasGrid-PrimeraPrueba">Primera Prueba</h3>  
+         <p>
+            Vamos a crear un style sencillo para las siguentes pruebas y demás. Siendo este para estos ejemplos:
+         </p>
+         <code>
+            <pre>
+               div.container {
+                  width: 80%;
+                  max-width: 1000px;
+                  
+                  margin: 0.5em auto;
+                  border: 0.8em solid $color-darker;
+               }
+
+               div.container > div {
+                  padding: 1em;
+            
+                  background-color: $color-lighter;
+                  box-shadow: 0.1em 0.1em 0.8em rgba($color: black, $alpha: 0.2);
+            
+                  color: white;
+                  font: 500 1.5em 'Roboto', sans-serif;
+                  text-align: center;
+               }
+            </pre>
+         </code>
+         <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+         </div>
+
+         <p>
+            Listo! Ahora vamos a iniciar con la menor practica, crear Columnas y Filas.
+         </p>
+
+         <h4 id="PruebasGrid-PrimeraPrueba_Columnas">Columnas</h4>
+         <code>
+            <pre>
+               #column-test {
+                  display: grid;
+                 
+                  grid-template-columns: 10em 10em 10em; 
+               }
+            </pre>
+         </code>
+         <div id="column-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+         </div>
+
+         <h4 id="PruebasGrid-PrimeraPrueba_FilasColumnas">Filas y Columnas</h4>
+         <p>
+            Las Filas no funcionan muy bien si no se tiene definido el <em>widht</em> o <em>height</em> del elemento, pero 
+            si se definen las columnas del Grid Layout, estos estaran mejor organizados.
+         </p>
+         <code>
+            <pre>
+               #columnrow-test {
+                  display: grid;
+                 
+                  grid-template-columns: 20% 60% 20%;
+                  grid-template-rows: 10em 10em 10em;
+               }
+            </pre>
+         </code>
+         <div id="columnrow-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
+
+         <h4 id="PruebasGrid-PrimeraPrueba_EspaciadoElementos">Espaciado entre los Elementos</h4>
+         <p>
+            Podemos usar un espaciado entre los elementos del Grid Layout para dar una mejor estetica y diseño.
+         </p>
+         <code>
+            <pre>
+               #gap-test {
+                  display: grid;
+                 
+                  grid-template-columns: 20% 20% 20%;
+                  grid-template-rows: 5em 5em 5em;
+                  grid-gap: 1em;
+               }
+            </pre>
+         </code>
+         <div id="gap-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
+
+         <h4 id="PruebasGrid-PrimeraPrueba_FraccionesGrid">Cloumnas y Filas Fracionarias</h4>
+         <p>
+            Para ocupar todo el Grid Container, podemos hacerlo de una forma medio mala, que es usando los %. O podemos 
+            usar una nueva medida que introduce Grid Layout, <mark>fr</mark> o francción. Divide el Grid Container 
+            en partes, se divide cuantas veces usemos la unidad, es decir, si la usamos solo una vez, se divide en 1, 
+            si la usamos 2 veces, se divide en 2, y así. 
+         </p>
+         <p>
+            También cuentan las fraciones si se usan por ejemplo: <strong>1fr 2fr 1fr</strong>. En este caso se dividiria en 5 partes 
+            y se da 2 partes a la columna o fila del centro.
+         </p>
+         <code>
+            <pre>
+               #fr-test {
+                  display: grid;
+                 
+                  grid-template-columns: 1fr 2fr 1fr;
+                  grid-template-rows: 2fr 1fr 2fr;
+               }
+            </pre>
+         </code>
+         <div id="fr-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
       </section>
    </main>
 </body>
