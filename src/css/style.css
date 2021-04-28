@@ -40,12 +40,13 @@ main nav {
   border-top-right-radius: 1em;
   padding: 1em;
   background-color: #79ff79;
+  /* Titles in Index */
+  /* Lists with links in Index */
 }
 main nav > h2 {
   color: white;
   font: 800 2em "Roboto", sans-serif;
   text-decoration: underline solid #00bb00 0.1em;
-  text-shadow: 0.1em 0.1em 1px #008800;
 }
 main nav ol {
   margin-left: 1em;
@@ -59,7 +60,6 @@ main nav ol > li {
 main nav ol > li::marker {
   color: white;
   font: 800 1em "Roboto", sans-serif;
-  text-shadow: 0.1em 0.1em 1px #008800;
 }
 main nav ol > li > a {
   color: #005500;
@@ -75,6 +75,14 @@ main section {
   margin: 1em auto;
   border-left: 0.2em solid #00ee00;
   padding: 1em;
+  /* Title */
+  /* SemiTitle */
+  /* SemiSemiTitle */
+  /* Paragraphs in Sections */
+  /* Lists in Sections */
+  /* CodeBlocks in the Section */
+  /* Semantics in Section */
+  /* Tests and Examples */
 }
 main section > h3 {
   width: 80%;
@@ -159,4 +167,18 @@ main section abbr {
 }
 main section mark {
   background-color: rgba(121, 255, 121, 0.5);
+}
+main section div.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0.5em auto;
+  border: 0.8em solid #005500;
+}
+main section div.container > div {
+  padding: 20px;
+  background-color: #79ff79;
+  box-shadow: 0.1em 0.1em 0.8em rgba(0, 0, 0, 0.2);
+  color: white;
+  font: 500 1.5em "Roboto", sans-serif;
+  text-align: center;
 }

@@ -54,12 +54,15 @@ main {
 
   background-color: $color-lighter;
 
+  /* Titles in Index */
+
   & > h2 {
    color: white;
    font: 800 2em 'Roboto', sans-serif;
    text-decoration: underline solid $color-base 0.1em;
-   text-shadow: 0.1em 0.1em 1px $color-dark;
   } 
+
+  /* Lists with links in Index */
 
   ol { 
    margin-left: 1em;
@@ -74,7 +77,6 @@ main {
     &::marker {
      color: white;
      font: 800 1em 'Roboto', sans-serif;
-     text-shadow: 0.1em 0.1em 1px $color-dark;
     }
 
     & > a {
@@ -99,6 +101,8 @@ main {
   border-left: 0.2em solid $color-light;
   padding: 1em;
 
+  /* Title */
+
   & > h3 {
    width: 80%;
 
@@ -110,6 +114,8 @@ main {
    color: black;
    font: 800 2em 'Roboto', sans-serif;
   }
+
+  /* SemiTitle */
 
   & > h4 {
    width: 60%; 
@@ -123,6 +129,8 @@ main {
    font: 600 1.4em 'Roboto', sans-serif;
   }
 
+  /* SemiSemiTitle */
+
   & > h5 {
    width: 40%;
    
@@ -135,6 +143,8 @@ main {
    font: 500 1.2em 'Roboto', sans-serif;
   }
 
+  /* Paragraphs in Sections */
+
   p {
    width: 100%;
 
@@ -142,6 +152,8 @@ main {
    font: 500 1em 'Roboto', sans-serif;
   }
  
+  /* Lists in Sections */
+
   ul,
   ol {
    margin-left: 1em;
@@ -165,6 +177,8 @@ main {
    }
   }
   
+  /* CodeBlocks in the Section */
+
   code {
    width: 90%;
 
@@ -180,6 +194,8 @@ main {
 
    display: block;
   }
+
+  /* Semantics in Section */
   
   strong { font-weight: 700; color: $color-base}
 
@@ -198,6 +214,25 @@ main {
   }
 
   mark {background-color: rgba($color: $color-lighter, $alpha: 0.5);}
- }
 
+  /* Tests and Examples */
+  div.container {
+   width: 80%;
+   max-width: 1000px;
+   
+   margin: 0.5em auto;
+   border: 0.8em solid $color-darker;
+
+   & > div {
+    padding: 20px;
+
+    background-color: $color-lighter;
+    box-shadow: 0.1em 0.1em 0.8em rgba($color: black, $alpha: 0.2);
+
+    color: white;
+    font: 500 1.5em 'Roboto', sans-serif;
+    text-align: center;
+   }
+  }
+ }
 }
