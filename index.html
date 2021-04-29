@@ -46,6 +46,10 @@
                <li><a href="#PruebasGrid-SegundaPrueba_MinMax">MinMax()</a></li>
                <li><a href="#PruebasGrid-SegundaPrueba_MinMaxAuto">MinMax() Con Auto</a></li>
             </ol>
+            <li><a href="#PruebasGrid-TerceraPrueba">Tercera Prueba</a></li>
+            <ol>
+               <li><a href="#PruebasGrid-TerceraPrueba_Repeat">Repeat()</a></li>
+            </ol>
          </ol>
       </nav>
 
@@ -345,6 +349,52 @@
             <div>7</div>
             <div>8</div>
             <div>9</div>
+         </div>
+      </section>
+
+
+      <section> 
+         <h3 id="PruebasGrid-TerceraPrueba">Tercera Prueba</h3>
+         <p>
+            Algunas veces al diseñar nuestro Grid Layout, necesitamos repetir algunos valores de varias filas o columnas, para 
+            ahorrar este trabajo podemos usar esta funcion:
+         </p>
+         <code>
+            grid-template-columns: repeat(<"Número de repetir">, <"Medida a Repetir">);
+         </code>
+         <p>
+            Esta función se puede convinar con otras funciones como <strong>minmax()</strong>, y ademas se puede aplicar otras columnas 
+            o filas ademas de las repetidas.
+         </p>
+         <code>
+            grid-template-columns: 12em repeat(3, minmax(auto, 12em)) minmax(1fr, auto);
+         </code>
+
+         <h4 id="PruebasGrid-TerceraPrueba_Repeat">Repeat()</h4>
+         <code>
+            <pre>
+               #repeat-test {
+                  display: grid;
+                 
+                  grid-template-columns: auto repeat(3, 1fr) auto;
+               }</pre>
+         </code>
+         <div id="repeat-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
          </div>
       </section>
    </main>
