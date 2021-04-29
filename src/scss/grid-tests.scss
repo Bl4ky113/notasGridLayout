@@ -27,3 +27,17 @@
  grid-template-columns: 1fr 2fr 1fr;
  grid-template-rows: 2fr 1fr 2fr;
 }
+
+#minmax-test {
+ display: grid;
+
+ grid-template-columns: 1fr minmax(1em, 2fr) 1fr;
+ grid-template-rows: minmax(1em, 2fr) 1fr minmax(1em, 2fr);
+}
+
+#minmaxauto-test {
+ display: grid;
+
+ grid-template-columns: minmax(auto, 1fr) 1fr 1fr;
+ grid-template-columns: minmax(auto, 1fr) 1fr 1fr;
+}

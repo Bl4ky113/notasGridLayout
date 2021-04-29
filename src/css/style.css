@@ -181,6 +181,7 @@ main section div.container > div {
   box-shadow: 0.1em 0.1em 0.8em rgba(0, 0, 0, 0.2);
   color: white;
   font: 500 1.5em "Roboto", sans-serif;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
