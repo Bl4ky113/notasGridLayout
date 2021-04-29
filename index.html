@@ -32,34 +32,34 @@
                <li><a href="#QueEsGrid-Terminologia_Area">Grid Area</a></li>
             </ol>
          </ol>
-         <h2>Pruebas de Grid</h2>
+         <h2>Clases de Grid</h2>
          <ol>
-            <li><a href="#PruebasGrid-PrimeraPrueba">Primera Prueba</a></li>
+            <li><a href="#ClasesGrid-PrimeraClase">Primera Clase</a></li>
             <ol>
-               <li><a href="#PruebasGrid-PrimeraPrueba_Columnas">Columnas</a></li>
-               <li><a href="#PruebasGrid-PrimeraPrueba_FilasColumnas">Filas y Columnas</a></li>
-               <li><a href="#PruebasGrid-PrimeraPrueba_EspaciadoElementos">Espaciado Elementos</a></li>
-               <li><a href="#PruebasGrid-PrimeraPrueba_FraccionesGrid">Fracciones en Grid</a></li>
+               <li><a href="#ClasesGrid-PrimeraClase_Columnas">Columnas</a></li>
+               <li><a href="#ClasesGrid-PrimeraClase_FilasColumnas">Filas y Columnas</a></li>
+               <li><a href="#ClasesGrid-PrimeraClase_EspaciadoElementos">Espaciado Elementos</a></li>
+               <li><a href="#ClasesGrid-PrimeraClase_FraccionesGrid">Fracciones en Grid</a></li>
             </ol>
-            <li><a href="#PruebasGrid-SegundaPrueba">Segunda Prueba</a></li>
+            <li><a href="#ClasesGrid-SegundaClase">Segunda Clase</a></li>
             <ol>
-               <li><a href="#PruebasGrid-SegundaPrueba_MinMax">MinMax()</a></li>
-               <li><a href="#PruebasGrid-SegundaPrueba_MinMaxAuto">MinMax() Con Auto</a></li>
+               <li><a href="#ClasesGrid-SegundaClase_MinMax">MinMax()</a></li>
+               <li><a href="#ClasesGrid-SegundaClase_MinMaxAuto">MinMax() Con Auto</a></li>
             </ol>
-            <li><a href="#PruebasGrid-TerceraPrueba">Tercera Prueba</a></li>
+            <li><a href="#ClasesGrid-TerceraClase">Tercera Clase</a></li>
             <ol>
-               <li><a href="#PruebasGrid-TerceraPrueba_Repeat">Repeat()</a></li>
+               <li><a href="#ClasesGrid-TerceraClase_Repeat">Repeat()</a></li>
             </ol>
-            <li><a href="#PruebasGrid-CuartaPrueba">Cuarta Prueba</a></li>
+            <li><a href="#ClasesGrid-CuartaClase">Cuarta Clase</a></li>
             <ol>
-               <li><a href="#PruebasGrid-CuartaPrueba_Posicionamiento">Posicionamiento En Grid Layout</a></li>
-               <li><a href="#PruebasGrid-CuartaPrueba_PosicionamientoColumnas">Posicionamiento Con Columnas</a></li>
-               <li><a href="#PruebasGrid-CuartaPrueba_PosicionamientoFilas">Posicionamiento Con Filas</a></li>
-               <li><a href="#PruebasGrid-CuartaPrueba_Span">Atributo Span</a></li>
+               <li><a href="#ClasesGrid-CuartaClase_Posicionamiento">Posicionamiento En Grid Layout</a></li>
+               <li><a href="#ClasesGrid-CuartaClase_PosicionamientoColumnas">Posicionamiento Con Columnas</a></li>
+               <li><a href="#ClasesGrid-CuartaClase_PosicionamientoFilas">Posicionamiento Con Filas</a></li>
+               <li><a href="#ClasesGrid-CuartaClase_Span">Atributo Span</a></li>
             </ol>
          </ol>
       </nav>
-
+      
       <section>
          <h3 id="QueEsGrid-QueEs">Que es Grid</h3>
          <p>
@@ -156,9 +156,9 @@
       </section>
 
       <section>
-         <h3 id="PruebasGrid-PrimeraPrueba">Primera Prueba</h3>  
+         <h3 id="ClasesGrid-PrimeraClase">Primera Clase</h3>  
          <p>
-            Vamos a crear un style sencillo para las siguentes pruebas y demás. Siendo este para estos ejemplos:
+            Vamos a crear un style sencillo para las siguentes Clases y demás. Siendo este para estos ejemplos:
          </p>
          <code>
             <pre>
@@ -194,7 +194,7 @@
             Listo! Ahora vamos a iniciar con la menor practica, crear Columnas y Filas.
          </p>
 
-         <h4 id="PruebasGrid-PrimeraPrueba_Columnas">Columnas</h4>
+         <h4 id="ClasesGrid-PrimeraClase_Columnas">Columnas</h4>
          <code>
             <pre>
                #column-test {
@@ -212,7 +212,7 @@
             <div>6</div>
          </div>
 
-         <h4 id="PruebasGrid-PrimeraPrueba_FilasColumnas">Filas y Columnas</h4>
+         <h4 id="ClasesGrid-PrimeraClase_FilasColumnas">Filas y Columnas</h4>
          <p>
             Las Filas no funcionan muy bien si no se tiene definido el <em>widht</em> o <em>height</em> del elemento, pero 
             si se definen las columnas del Grid Layout, estos estaran mejor organizados.
@@ -238,7 +238,7 @@
             <div>9</div>
          </div>
 
-         <h4 id="PruebasGrid-PrimeraPrueba_EspaciadoElementos">Espaciado entre los Elementos</h4>
+         <h4 id="ClasesGrid-PrimeraClase_EspaciadoElementos">Espaciado entre los Elementos</h4>
          <p>
             Podemos usar un espaciado entre los elementos del Grid Layout para dar una mejor estetica y diseño.
          </p>
@@ -264,7 +264,7 @@
             <div>9</div>
          </div>
 
-         <h4 id="PruebasGrid-PrimeraPrueba_FraccionesGrid">Cloumnas y Filas Fracionarias</h4>
+         <h4 id="ClasesGrid-PrimeraClase_FraccionesGrid">Cloumnas y Filas Fracionarias</h4>
          <p>
             Para ocupar todo el Grid Container, podemos hacerlo de una forma medio mala, que es usando los %. O podemos 
             usar una nueva medida que introduce Grid Layout, <mark>fr</mark> o francción. Divide el Grid Container 
@@ -298,7 +298,7 @@
       </section>
 
       <section>
-         <h3 id="PruebasGrid-SegundaPrueba">Segunda Prueba</h3>
+         <h3 id="ClasesGrid-SegundaClase">Segunda Clase</h3>
          <p>
             Puede que al momento de querer que un diseño en Grid Layout sea <i>Responsive</i>, necesitemos que un elemento se 
             adapte a el dispositivo, para hacer que las columnas y filas se adapten, podemos usar esta funcion.
@@ -307,7 +307,7 @@
             <pre>
                minmax(<"Valor Minimo">, <"Valor Máximo">)</pre>
          </code>
-         <h4 id="PruebasGrid-SegundaPrueba_MinMax">MinMax()</h4>
+         <h4 id="ClasesGrid-SegundaClase_MinMax">MinMax()</h4>
             <p>
             Ejemplo de esto:
          </p>
@@ -331,7 +331,7 @@
             <div>8</div>
             <div>9</div>
          </div>
-         <h4 id="PruebasGrid-SegundaPrueba_MinMaxAuto">MinMax(auto)</h4>
+         <h4 id="ClasesGrid-SegundaClase_MinMaxAuto">MinMax(auto)</h4>
          <p>
             Debemos tener cuidado con esto y las demás medidas, ya que puede que el contenido del Grid Cell se pierda, o no se muestre.
             Para evitar esto debemos usar en la función el valor de <strong>auto</strong>. Con eso el tamaño máximo o minimo va a ser 
@@ -361,7 +361,7 @@
 
 
       <section> 
-         <h3 id="PruebasGrid-TerceraPrueba">Tercera Prueba</h3>
+         <h3 id="ClasesGrid-TerceraClase">Tercera Clase</h3>
          <p>
             Algunas veces al diseñar nuestro Grid Layout, necesitamos repetir algunos valores de varias filas o columnas, para 
             ahorrar este trabajo podemos usar esta funcion:
@@ -377,7 +377,7 @@
             grid-template-columns: 12em repeat(3, minmax(auto, 12em)) minmax(1fr, auto);
          </code>
 
-         <h4 id="PruebasGrid-TerceraPrueba_Repeat">Repeat()</h4>
+         <h4 id="ClasesGrid-TerceraClase_Repeat">Repeat()</h4>
          <code>
             <pre>
                #repeat-test {
@@ -406,12 +406,12 @@
       </section>
 
       <section>
-         <h3 id="PruebasGrid-CuartaPrueba">Cuarta Prueba</h3>
+         <h3 id="ClasesGrid-CuartaClase">Cuarta Clase</h3>
          <p>
             Ahora vamos a ver donde Grid Layout se puede usar de las mejores formas.
          </p>
 
-         <h4 id="PruebasGrid-CuartaPrueba_Posicionamiento">Posicionamiento En Grid Layout</h4>
+         <h4 id="ClasesGrid-CuartaClase_Posicionamiento">Posicionamiento En Grid Layout</h4>
          <p>
             En Grid Layout, no podemos posicionar o mover elementos sin un espacio, ya que esto puede hacer que se vea mal el Grid Container 
             y se salgan de lugar los Grid Items. Por Ejemplo:
@@ -479,7 +479,7 @@
             El Principal ejemplo, es tener un buen espacio en donde poder mover, manipular y demás los Grid Items.
          </p>
 
-         <h4 id="PruebasGrid-CuartaPrueba_PosicionamientoColumnas">Posicionamiento Con Columnas En Grid Layout</h4>
+         <h4 id="ClasesGrid-CuartaClase_PosicionamientoColumnas">Posicionamiento Con Columnas En Grid Layout</h4>
          <p>
             Para Posicionar los elementos en columnas, debemos tener un espacio libre en columnas o filas. Ejemplo:
          </p>
@@ -558,7 +558,7 @@
             <strong>Esto permitira que se puedan agregar más objetos y columnas, sin que se dañe ese Grid Item</strong>, que puede ser un Navigation Bar o un Header.
          </p>
 
-         <h3 id="PruebasGrid-CuartaPrueba_PosicionamientoFilas">Posicionamiento Con Filas en Grid Layout</h3>
+         <h3 id="ClasesGrid-CuartaClase_PosicionamientoFilas">Posicionamiento Con Filas en Grid Layout</h3>
          <p>
             El posicionamiento con Filas en Grid, es lo mismo que en las Columnas, se usan las Grid Lines, se pueden usar valores positivos, negativos 
             y pudiendose combinar entre ambos. Se puede modificar el BoxModel del elemento y su posicionamiento, entre otros.
@@ -617,7 +617,7 @@
             <div id="item8">8</div>
          </div>
          
-         <h4 id="PruebasGrid-CuartaPrueba_Span">Atributo Span</h4>
+         <h4 id="ClasesGrid-CuartaClase_Span">Atributo Span</h4>
          <p>
             Se puede usar este atributo para usar en las columnas o en las filas, para definir cuantas Grid cells ocupe. 
          </p>
