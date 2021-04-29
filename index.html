@@ -50,6 +50,13 @@
             <ol>
                <li><a href="#PruebasGrid-TerceraPrueba_Repeat">Repeat()</a></li>
             </ol>
+            <li><a href="#PruebasGrid-CuartaPrueba">Cuarta Prueba</a></li>
+            <ol>
+               <li><a href="#PruebasGrid-CuartaPrueba_Posicionamiento">Posicionamiento En Grid Layout</a></li>
+               <li><a href="#PruebasGrid-CuartaPrueba_PosicionamientoColumnas">Posicionamiento Con Columnas</a></li>
+               <li><a href="#PruebasGrid-CuartaPrueba_PosicionamientoFilas">Posicionamiento Con Filas</a></li>
+               <li><a href="#PruebasGrid-CuartaPrueba_Span">Atributo Span</a></li>
+            </ol>
          </ol>
       </nav>
 
@@ -395,6 +402,261 @@
             <div>13</div>
             <div>14</div>
             <div>15</div>
+         </div>
+      </section>
+
+      <section>
+         <h3 id="PruebasGrid-CuartaPrueba">Cuarta Prueba</h3>
+         <p>
+            Ahora vamos a ver donde Grid Layout se puede usar de las mejores formas.
+         </p>
+
+         <h4 id="PruebasGrid-CuartaPrueba_Posicionamiento">Posicionamiento En Grid Layout</h4>
+         <p>
+            En Grid Layout, no podemos posicionar o mover elementos sin un espacio, ya que esto puede hacer que se vea mal el Grid Container 
+            y se salgan de lugar los Grid Items. Por Ejemplo:
+         </p>
+         <h5>Bien Hecho</h5>
+         <p>
+            En este ejemplo tenemos una fila más para poder modificar y mover los elementos, aún que se podría ampliar las columnas, es 
+            suficiente para manipular los elementos de una manera comoda.
+         </p>
+         <code>
+            <pre>
+               #bienPosicionamiento-test {
+                  display: grid;
+                 
+                  grid-template-columns: repeat(3, auto);
+                  grid-template-rows: repeat(5, 5em);
+                  grid-gap: 1em;
+               }</pre>
+         </code>
+         <div id="bienPosicionamiento-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+         </div>
+         <h5>Mal Hecho</h5>
+         <p>
+            En Este Ejemplo no tenemos espacio suficiente para poner otro elemento, aún que se podría si modificamos el BoxModel de estos. 
+            Cosa no aconsejable por ahora.
+         </p>
+         <code>
+            <pre>
+               #malPosicionamiento-test {
+                  display: grid;
+                 
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-template-rows: repeat(4, 5em);
+                  grid-gap: 1em;
+               }</pre>
+         </code>
+         <div id="malPosicionamiento-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+         </div>
+
+         <p>
+            El Principal ejemplo, es tener un buen espacio en donde poder mover, manipular y demás los Grid Items.
+         </p>
+
+         <h4 id="PruebasGrid-CuartaPrueba_PosicionamientoColumnas">Posicionamiento Con Columnas En Grid Layout</h4>
+         <p>
+            Para Posicionar los elementos en columnas, debemos tener un espacio libre en columnas o filas. Ejemplo:
+         </p>
+         <code>
+            <pre>
+               #posicionamientoColumnas_1-test {
+                  display: grid;
+                 
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-template-rows: repeat(5, 5em);
+                  grid-gap: 1em;
+                 
+                  #item1 {
+                   background-color: darkgreen;
+                   grid-column-start: 2;
+                   grid-column-end: 3;
+                  }
+               }</pre>
+         </code>
+         <div id="posicionamientoColumnas_1-test" class="container">
+            <div id="item1">1</div>
+            <div id="item2">2</div>
+            <div id="item3">3</div>
+            <div id="item4">4</div>
+            <div id="item5">5</div>
+            <div id="item6">6</div>
+            <div id="item7">7</div>
+            <div id="item8">8</div>
+         </div>
+         <p>
+            Como podemos ver en el ejemplo, usamos a <strong>grid-column-start:</strong> y <strong>grid-column-end:</strong> para 
+            mover el Grid Item. <mark>Movemos a el Grid Item dependiendo de las Grid Lines</mark>, quienes forman los <strong>Grid Cells</strong> y los <strong>Grid Tracks</strong>. 
+            Estas Lineas se pueden usar tanto valores positivos, contando de izquierda a derecha, ejemplo <mark>start: 1, end: 2</mark>. O se puede 
+            poner valores negativos, que cuenten de izquierda a derecha, ejemplo <mark>start: -1, end: -2</mark>. Se puede combinar ambos 
+            o usar un valor menor en <mark>end</mark> que en <mark>start</mark>, ejemplo <mark>start: 2, end: 1</mark>. Se puede crear 
+            nuevas columnas al intentar usar un número mayor a el de <strong>Grid Lines</strong>. Pero esto puede generar algunos errores en 
+            otros <strong>Grid Items</strong>.
+         </p>
+         <p>
+            Tabién se puede usar Grid Layout no solo para el posicionamiento, sino para modificar el <strong>BoxModel</strong> del elemento, Esto lo 
+            logramos usando más de dos <strong>Grid Cells</strong> al determinar cuantas Grid Lines tiene que usar el Grid Item. Ejemplo, para usar dos 
+            o más deberiamos tener 3 o más Grid Lines.
+         </p>
+         <code>
+            <pre>
+               #posicionamientoColumnas_2-test {
+                  display: grid;
+                 
+                  grid-template-columns: repeat(3, 1fr);
+                  grid-template-rows: repeat(5, 5em);
+                  grid-gap: 1em;
+                  
+                  #item1 {
+                   background-color: darkgreen;
+                   grid-column-start: 1;
+                   grid-column-end: 4;
+                  }
+               }</pre>
+         </code>
+         <div id="posicionamientoColumnas_2-test" class="container">
+            <div id="item1">1</div>
+            <div id="item2">2</div>
+            <div id="item3">3</div>
+            <div id="item4">4</div>
+            <div id="item5">5</div>
+            <div id="item6">6</div>
+            <div id="item7">7</div>
+            <div id="item8">8</div>
+         </div>
+         <p>
+            En Este Ejemplo tenemos las Grid lines: 1, 2, 3 y 4. Y cómo 4 es la ultima del Grid (y no queremos romper el Grid Layout), 
+            no se puede tener más Grid Lines.
+         </p>
+         <p>
+            Si necesitamos que el Grid Item ocupa toda esta Row, debemos hacer uso de las medidas negativas de esta forma <mark>start: 1, end: -1;</mark>.
+            <strong>Esto permitira que se puedan agregar más objetos y columnas, sin que se dañe ese Grid Item</strong>, que puede ser un Navigation Bar o un Header.
+         </p>
+
+         <h3 id="PruebasGrid-CuartaPrueba_PosicionamientoFilas">Posicionamiento Con Filas en Grid Layout</h3>
+         <p>
+            El posicionamiento con Filas en Grid, es lo mismo que en las Columnas, se usan las Grid Lines, se pueden usar valores positivos, negativos 
+            y pudiendose combinar entre ambos. Se puede modificar el BoxModel del elemento y su posicionamiento, entre otros.
+         </p>
+         <code>
+            <pre>
+               #posicionamientoFilas_1-test {
+                  display: grid;
+                  
+                  grid-template-columns: repeat(4, 1fr);
+                  grid-template-rows: repeat(3, 5em);
+                  grid-gap: 1em;
+                  
+                  #item1 {
+                   background-color: darkgreen;
+                   grid-row-start: 2;
+                   grid-row-end: 3;
+                  }
+               }</pre>
+         </code>
+         <div id="posicionamientoFilas_1-test" class="container">
+            <div id="item1">1</div>
+            <div id="item2">2</div>
+            <div id="item3">3</div>
+            <div id="item4">4</div>
+            <div id="item5">5</div>
+            <div id="item6">6</div>
+            <div id="item7">7</div>
+            <div id="item8">8</div>
+         </div>
+
+         <code>
+            <pre>
+               #posicionamientoFilas_2-test {
+                  display: grid;
+                  
+                  grid-template-columns: repeat(4, 1fr);
+                  grid-template-rows: repeat(3, 5em);
+                  grid-gap: 1em;
+                  
+                  #item1 {
+                   background-color: darkgreen;
+                   grid-row-start: 1;
+                   grid-row-end: 4;
+                  }
+               }</pre>
+         </code>
+         <div id="posicionamientoFilas_2-test" class="container">
+            <div id="item1">1</div>
+            <div id="item2">2</div>
+            <div id="item3">3</div>
+            <div id="item4">4</div>
+            <div id="item5">5</div>
+            <div id="item6">6</div>
+            <div id="item7">7</div>
+            <div id="item8">8</div>
+         </div>
+         
+         <h4 id="PruebasGrid-CuartaPrueba_Span">Atributo Span</h4>
+         <p>
+            Se puede usar este atributo para usar en las columnas o en las filas, para definir cuantas Grid cells ocupe. 
+         </p>
+         <code>
+            <pre>
+               #span-test {
+                  display: grid;
+                 
+                  grid-template-columns: repeat(8, 1fr);
+                  grid-template-rows: repeat(2, 5em);
+                  grid-gap: 1em;
+                 
+                  #item1 {
+                   background-color: darkgreen;
+                   grid-column-start: 1;
+                   grid-column-end: span 6;
+                   
+                   grid-row-start: 2;
+                   grid-row-end: span 2;
+                  }
+               }</pre>
+         </code>
+         <div id="span-test" class="container">
+            <div id="item1">1</div>
+            <div id="item2">2</div>
+            <div id="item3">3</div>
+            <div id="item4">4</div>
+            <div id="item5">5</div>
+            <div id="item6">6</div>
+            <div id="item7">7</div>
+            <div id="item8">8</div>
+            <div id="item9">9</div>
+            <div id="item10">10</div>
+            <div id="item11">11</div>
+            <div id="item12">12</div>
+            <div id="item13">13</div>
+            <div id="item14">14</div>
+            <div id="item15">15</div>
+            <div id="item16">16</div>
          </div>
       </section>
    </main>
