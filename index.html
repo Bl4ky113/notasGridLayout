@@ -58,6 +58,10 @@
                <li><a href="#ClasesGrid-CuartaClase_PosicionamientoFilas">Posicionamiento Con Filas</a></li>
                <li><a href="#ClasesGrid-CuartaClase_Span">Atributo Span</a></li>
             </ol>
+            <li><a href="#ClasesGrid-QuintaClase">Cuarta Clase</a></li>
+            <ol>
+               <li><a href="#ClasesGrid-QuintaClase_Areas">Areas en Grid Layout</a></li>
+            </ol>
          </ol>
       </nav>
       
@@ -173,6 +177,7 @@
             <li><a href="https://www.youtube.com/watch?v=cVJk8gTG9f4"><i>Tercera Clase Grid</i>. (17 de enero de 2019). Falcon Masters</a></li>
             <li><a href="https://www.youtube.com/watch?v=iXTku78meNM"><i>Cuarta Clase Grid</i>. (18 de enero de 2019). Falcon Masters</a></li>
             <li><a href="https://www.youtube.com/watch?v=GUXYOsbKYoY"><i>Quinta Clase Grid</i>. (18 de enero de 2019). Falcon Masters</a></li>
+            <li><a href="https://www.youtube.com/watch?v=AH37dD8eTzI"><i>Sexta Clase Grid</i>. (19 de enero de 2019). Falcon Masters</a></li>
          </ul>
       </section>
 
@@ -678,6 +683,84 @@
             <div id="item14">14</div>
             <div id="item15">15</div>
             <div id="item16">16</div>
+         </div>
+      </section>
+
+      <section>
+         <h3 id="ClasesGrid-QuintaClase">Quinta Clase</h3>
+         <p>
+            Un factor muy importante al momento de usar Grid para que nuestro diseño sea <i>Responsive</i>, necesitamos 
+            usar las <strong>Areas</strong>.
+         </p>
+
+         <h4 id="ClasesGrid-QuintaClase_Areas">Areas En Grid Layout</h4>
+         <p>
+            Son una forma de categorizar y posicionar Grid Items, estas Areas las vamos a categorizar mediante nombres y una cuadricula hecha en el <i>StyleSheet</i>
+            Estas areas nos pueden ayudar mucho a hacer un formato de web con header, main, asides, navs, footer y otros. 
+         </p>
+         <p>
+            Para definir que areas queremos dentro del Grid Layout, vamos a especificarlas con <strong>grid-template-areas:</strong>, pero en areas vamos a 
+            introducir los nombres y Grid Cells que va a ocupar cada area, ejemplo:
+         </p>
+         <code>
+            <pre>
+               /* Tenemos una cuadricula con 4 columnas y 3 filas */
+               grid-template-areas: "header header header header" /* Un header de 4 columnas y una fila */
+                                    "aside  main   main   nav" /* Un aside de una columna y una fila, un nav igual y un main con dos columnas. */
+                                    "footer footer footer footer" /* Un footer de 4 columnas y una fila */
+            </pre>
+         </code>
+         <p>
+            Ahora con las areas definidas podemos usar <strong>grid-area</strong> o los mil y un formas sin shortcut que hay para asignar un elemento a esa area.
+            Lo mejor de esto, es que en el html no es necesario tener los elementos en orden, solo un style que los asigne a el area y ya! Ejemplo de Areas.
+         </p>
+         <code>
+            <pre>
+               #GridArea_1-test {
+                  display: grid;
+                 
+                  grid-template-rows: repeat(3, 1fr);
+                  grid-template-rows: repeat(3, 5em);
+                  grid-template-areas: "header header header"
+                                       "aside  main   nav"
+                                       "footer footer footer";
+               }</pre>
+         </code>
+         <div class="container" id="GridArea_1-test">
+            <div id="item1">Header</div>
+            <div id="item2">Aside</div>
+            <div id="item3">Main</div>
+            <div id="item4">Nav</div>
+            <div id="item5">Footer</div>
+         </div>
+         <p>
+            Listo, ya tenemos las Areas hechas, para verlas vamos a ir a la consola de desarrllador, seleccionar el Grid Container y ver los nombres de las areas.
+            Pero no tienen ninguno de los Grid Items asignados, así que de poco sirven, pero este sería el resultado con los Grid Items asignados.
+         </p>
+         <code>
+            <pre>
+               #GridArea_2-test {
+                  display: grid;
+                 
+                  grid-template-rows: repeat(3, 1fr);
+                  grid-template-rows: repeat(3, 5em);
+                  grid-template-areas: "header header header"
+                                       "aside  main   nav"
+                                       "footer footer footer";
+                 
+                  #item1 { grid-area: header; }
+                  #item2 { grid-area: aside; }
+                  #item3 { grid-area: main; }
+                  #item4 { grid-area: nav; }
+                  #item5 { grid-area: footer}
+               }</pre>
+         </code>
+         <div id="GridArea_2-test" class="container">
+            <div id="item1">Header</div>
+            <div id="item2">Aside</div>
+            <div id="item3">Main</div>
+            <div id="item4">Nav</div>
+            <div id="item5">Footer</div>
          </div>
       </section>
    </main>
