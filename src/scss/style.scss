@@ -153,6 +153,19 @@ main {
    color: black;
    font: 500 1em 'Roboto', sans-serif;
   }
+  
+  /* Links in Sections */
+
+  a {
+   margin: 1em 1.25em;
+
+   color: $color-dark;
+   font: 800 1.125em 'Roboto', sans-serif;
+   text-decoration: underline solid $color-dark 0.1em;
+
+   &:hover,
+   &:focus { color: $color-base; }
+  }
  
   /* Lists in Sections */
 

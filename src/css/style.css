@@ -79,6 +79,7 @@ main section {
   /* SemiTitle */
   /* SemiSemiTitle */
   /* Paragraphs in Sections */
+  /* Links in Sections */
   /* Lists in Sections */
   /* CodeBlocks in the Section */
   /* Semantics in Section */
@@ -116,6 +117,15 @@ main section p {
   margin: 0.8em auto;
   color: black;
   font: 500 1em "Roboto", sans-serif;
+}
+main section a {
+  margin: 1em 1.25em;
+  color: #008800;
+  font: 800 1.125em "Roboto", sans-serif;
+  text-decoration: underline solid #008800 0.1em;
+}
+main section a:hover, main section a:focus {
+  color: #00bb00;
 }
 main section ul,
 main section ol {
