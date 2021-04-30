@@ -125,7 +125,7 @@
 
 #GridArea_2-test {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 5em);
   grid-template-areas: "header header header" "aside  main   nav" "footer footer footer";
 }
@@ -143,4 +143,27 @@
 }
 #GridArea_2-test #item5 {
   grid-area: footer;
+}
+
+#align-test {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 10em);
+}
+#align-test #item-start {
+  justify-self: start;
+  align-self: start;
+}
+#align-test #item-end {
+  justify-self: end;
+  align-self: end;
+}
+#align-test #item-stretch {
+  justify-self: auto;
+  align-self: stretch;
+}
+#align-test #item-center {
+  justify-self: center;
+  align-self: center;
 }

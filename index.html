@@ -58,9 +58,13 @@
                <li><a href="#ClasesGrid-CuartaClase_PosicionamientoFilas">Posicionamiento Con Filas</a></li>
                <li><a href="#ClasesGrid-CuartaClase_Span">Atributo Span</a></li>
             </ol>
-            <li><a href="#ClasesGrid-QuintaClase">Cuarta Clase</a></li>
+            <li><a href="#ClasesGrid-QuintaClase">Quinta Clase</a></li>
             <ol>
                <li><a href="#ClasesGrid-QuintaClase_Areas">Areas en Grid Layout</a></li>
+            </ol>
+            <li><a href="#ClasesGrid-SextaClase">Sexta Clase</a></li>
+            <ol>
+               <li><a href="#ClasesGrid-SextaClase_AlineacionElementos">Alineación de Elementos</a></li>
             </ol>
          </ol>
       </nav>
@@ -761,6 +765,94 @@
             <div id="item3">Main</div>
             <div id="item4">Nav</div>
             <div id="item5">Footer</div>
+         </div>
+      </section>
+
+      <section>
+         <h3 id="ClasesGrid-SextaClase">Sexta Clase</h3>
+         <p>
+            Como hemos visto, la mayoria de veces Grid Layout coge y estira los Grid Items que estan dentro de las Grid Cells. Para evitar que haga esto podemos usar 
+            diferentes propiedades para darles un efecto o diseño especifico. Para esto usamos las propiedades de Alineación de Elementos.
+         </p>
+
+         <h4 id="ClasesGrid-SextaClase_AlineacionElementos">Alineación de Elementos en Grid Layout</h4>
+         <p>
+            Para alinear TODOS los elementos del Grid Layout, podemos usar dos principales Propiedades:
+         </p>
+         <h5>justify-items:  </h5>
+         <p>
+            Alinea los elementos de una forma horizontal, puede usar algunos valores, como:
+         </p>
+         <ul>
+            <li>
+               <Strong>Start</Strong>: Alinea a los elementos en el inicio horizontal del Grid Cell, generalmente solo ocupando lo que indica su boxmodel.
+            </li>
+            <li>
+               <strong>End</strong>: Alinea los elementos en el final horizontal del Grid Cell, generalmente solo ocupando lo que indica su boxmodel.
+            </li>
+            <li>
+               <Strong>Stretch | Auto</Strong>: Estira los elementos para que ocupan todo el espacio horizontal del Grid Cell.
+            </li>
+            <li>
+               <strong>Center</strong>: Alinea los elementos horizontalmente en el centro del Grid Cell, respetando su boxmodel.
+            </li>
+         </ul>
+         
+         <h5>align-items:  </h5>
+         <p>
+            Alinea los elementos de una forma vertical, puede usar algunos valores, como:
+         </p>
+         <ul>
+            <li>
+               <Strong>Start</Strong>: Alinea los elementos en el inicio vertical del Grid Cell, generalmente solo ocupando lo que indica su boxmodel.
+            </li>
+            <li>
+               <strong>End</strong>: Alinea los elementos en el final vertical del Grid Cell, generalmente solo ocupando lo que indica su boxmodel.
+            </li>
+            <li>
+               <Strong>Stretch | Auto</Strong>: Estira los elementos para que ocupan todo el espacio vertical del Grid Cell.
+            </li>
+            <li>
+               <strong>Center</strong>: Alinea los elementos verticalmente en el centro del Grid Cell, respetando su boxmodel.
+            </li>
+         </ul>
+         <p>
+            Pero que tal si queremos que un elemento sea diferente a los demás? un elemento revelde que no le guste seguir las reglas de los demás?
+         </p>
+         <p>
+            Para eso usaremos en cada Grid Item individualmente (si es necesario o si es un revelde), las siguientes propiedades:
+         </p>
+         <ul>
+            <li>justify-self</li>
+            <li>align-self</li>
+         </ul>
+         <p>
+            Estas tienen las mismas propiedades disponibles que <strong>justify-items</strong> y <strong>align-items</strong>.
+         </p>
+         <p>
+            Ejemplo de todas las propiedades con justify-self y align-self.
+         </p>
+         <code>
+            <pre>
+               #align-test {
+                  display: grid;
+                 
+                  grid-gap: 20px;
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(2, 10em);
+                 
+                  #item-start { justify-self: start; align-self: start; }
+                  #item-end { justify-self: end; align-self: end; }
+                  #item-stretch { justify-self: auto; align-self: stretch; }
+                  #item-center { justify-self: center; align-self: center; }
+               }</pre>
+         </code>
+
+         <div id="align-test" class="container">
+            <div id="item-start">Start</div>
+            <div id="item-end">End</div>
+            <div id="item-stretch">Stretch</div>
+            <div id="item-center">Center</div>
          </div>
       </section>
    </main>
