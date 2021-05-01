@@ -75,6 +75,11 @@
                <li><a href="#ClasesGrid-OctavaClase_GridAuto">Grid Auto para Columns o Rows</a></li>
                <li><a href="#ClasesGrid-OctavaClase_GridFlow">Grid Flow para los Grid Items</a></li>
             </ol>
+            <li><a href="#ClasesGrid-NovenaClase">Novena Clase</a></li>
+            <ol>
+               <li><a href="#ClasesGrid-NovenaClase_AutoFill">Auto Fill</a></li>
+               <li><a href="#ClasesGrid-NovenaClase_AutoFit">Auto Fit</a></li>
+            </ol>
          </ol>
       </nav>
       
@@ -193,6 +198,7 @@
             <li><a href="https://www.youtube.com/watch?v=AH37dD8eTzI"><i>Sexta Clase Grid</i>. (19 de enero de 2019). Falcon Masters</a></li>
             <li><a href="https://www.youtube.com/watch?v=5oRA6RwKoBQ"><i>Septima Clase Grid</i>. (19 de enero de 2019). Falcon Masters</a></li>
             <li><a href="https://www.youtube.com/watch?v=FQU2zeHzll0"><i>Octava Clase Grid</i>. (21 de enero de 2019). Falcon Masters</a></li>
+            <li><a href="https://www.youtube.com/watch?v=hPd93mijFCM"><i>Novena Clase Grid</i>. (21 de enero de 2019). Falcon Masters</a></li>
          </ul>
       </section>
 
@@ -1170,6 +1176,79 @@
                un espacio vacio en el Grid Container, se va a rellenar este con un elemento que pueda entrar ahí. Creando un grid más organizado y menos vacio.
             </li>
          </ul>
+      </section>
+
+      <section>
+         <h3 id="ClasesGrid-NovenaClase">Novena Clase</h3>
+         <p>
+            En el momento de hacer un diseño <i>Responsive</i> debemos asegurar que nuestras columnas y filas sean responsivas también, pero algunas veces 12 
+            columna o filas no va a ser mejor en un diseño de celular, esto puede ser ya que los elementos no se organicen bién o se vean muy muy pequeños. 
+            Esto lo podemos hacer con "@media", pero deberíamos ver y intentar con cada tamaño de pantalla, para que sea la cantidad necesaria de columnas y rows.
+         </p>
+         <p>
+            Para evitar esto, vamos a usar unos valores que se pueden usar en la funcion de <strong>repeat()</strong> o en el atributo de 
+            <strong>grid-template-columns/rows</strong>, estos valores son:
+         </p>
+
+         <h4 id="ClasesGrid-NovenaClase_AutoFill">Auto Fill</h4>
+         <p>
+            Se usa para que la cantidad de columnas o filas, dependiendo del <strong>grid-auto-flow</strong>, sea automatica a el tamaño de la pantalla, pero 
+            esto lo consigue añadiendo más y más columnas a el Grid Container cuando se agranda la pantalla. Cuando se vuelve más pequeña la pantalla, se 
+            crea una nueva fila o columna y se organizan ahí los elementos que no entran. Se agrega de la siguiente forma:
+         </p>
+         <code>
+            grid-template-columns/rows: repeat(auto-fill, <"Tamaño de la columna/fila">)
+         </code>
+         <p>
+            Ejemplo de <strong>autofill</strong>, debes usar la consola de desarrollador para ver como cambia con diferentes pantallas.
+         </p>
+         <code>
+            <pre>
+               #autofill-test {
+                  display: grid;
+                 
+                  grid-gap: 1em;
+                  grid-template-columns: repeat(auto-fill, minmax(2em, 1fr));
+               }</pre>
+         </code>
+         <div id="autofill-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+         </div>
+         
+         <h4 id="ClasesGrid-NovenaClase_AutoFit">Auto Fit</h4>
+         <p>
+            Se usa para que los elementos dentro de las columnas o filas, dependiendo del <strong>grid-auto-flow</strong>, se vuelvan más grandes dependiendo de que tan 
+            grande es la pantalla y se vuelven pequeños, hasta llegar a el minimo del Boxmodel, dependiendo de que tan pequeña es la pantalla. Al llegar a el minimo del 
+            Boxmodel del elemento, crea una fila o columna nueva y los organiza ahí los que no entran.
+         </p>
+         <code>
+            gris-template-columns/rows: repeat(auto-fit, <"Tamaño de la columna/fila">) /* Preferiblemente con un minmax() */
+         </code>
+         <p>
+            Ejemplo de <strong>autofit</strong>, debes usar la consola de desarrollador para ver como cambia con diferentes pantallas.
+         </p>
+         <code>
+            <pre>
+               #autofit-test {
+                  display: grid;
+                 
+                  grid-gap: 1em;
+                  grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+               }</pre>
+         </code>
+         <div id="autofit-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+         </div>
       </section>
    </main>
 </body>
