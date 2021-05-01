@@ -162,10 +162,10 @@
  #item5 { grid-area: footer}
 }
 
-#align-test {
+#alignItems-test {
  display: grid;
 
- grid-gap: 20px;
+ grid-gap: 1em;
  grid-template-columns: repeat(2, 1fr);
  grid-template-rows: repeat(2, 10em);
 
@@ -173,4 +173,97 @@
  #item-end { justify-self: end; align-self: end; }
  #item-stretch { justify-self: auto; align-self: stretch; }
  #item-center { justify-self: center; align-self: center; }
+}
+
+#alignTrack_start-test {
+ width: 30em;
+ height: 30em;
+
+ display: grid;
+
+ grid-gap: 1em;
+ grid-template-columns: repeat(3, 5em);
+ grid-template-rows: repeat(3, 5em);
+
+ justify-content: start;
+ align-content: start;
+}
+
+#alignTrack_end-test {
+ width: 30em;
+ height: 30em;
+
+ display: grid;
+
+ grid-gap: 1em;
+ grid-template-columns: repeat(3, 5em);
+ grid-template-rows: repeat(3, 5em);
+
+ justify-content: end;
+ align-content: end;
+}
+
+#alignTrack_center-test {
+ width: 30em;
+ height: 30em;
+
+ display: grid;
+
+ grid-gap: 1em;
+ grid-template-columns: repeat(3, 5em);
+ grid-template-rows: repeat(3, 5em);
+
+ justify-content: center;
+ align-content: center;
+}
+
+#alignTrack_spaceAround-test {
+ width: 30em;
+ height: 30em;
+
+ display: grid;
+
+ grid-gap: 1em;
+ grid-template-columns: repeat(3, 5em);
+ grid-template-rows: repeat(3, 5em);
+
+ justify-content: space-around;
+ align-content: space-around;
+}
+
+#alignTrack_spaceBetween-test {
+ width: 30em;
+ height: 30em;
+
+ display: grid;
+
+ grid-gap: 1em;
+ grid-template-columns: repeat(3, 5em);
+ grid-template-rows: repeat(3, 5em);
+
+ justify-content: space-between;
+ align-content: space-between;
+}
+
+#alignTrack_spaceEvenly-test {
+ width: 30em;
+ height: 30em;
+
+ display: grid;
+
+ grid-gap: 1em;
+ grid-template-columns: repeat(3, 5em);
+ grid-template-rows: repeat(3, 5em);
+
+ justify-content: space-evenly;
+ align-content: space-evenly;
+}
+
+#gridAuto-test {
+ display: grid;
+
+ grid-gap: 1em;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 5em 3em 5em;
+ grid-auto-rows: 10em; /* Tamaño para los Hellos en las nuevas Rows */
 }

@@ -66,6 +66,15 @@
             <ol>
                <li><a href="#ClasesGrid-SextaClase_AlineacionElementos">Alineación de Elementos</a></li>
             </ol>
+            <li><a href="#ClasesGrid-SeptimaClase">Septima Clase</a></li>
+            <ol>
+               <li><a href="#ClasesGrid-SeptimaClase_AlineacionTracks">Alineación de Grid Tracks</a></li>
+            </ol>
+            <li><a href="#ClasesGrid-OctavaClase">Octava Clase</a></li>
+            <ol>
+               <li><a href="#ClasesGrid-OctavaClase_GridAuto">Grid Auto para Columns o Rows</a></li>
+               <li><a href="#ClasesGrid-OctavaClase_GridFlow">Grid Flow para los Grid Items</a></li>
+            </ol>
          </ol>
       </nav>
       
@@ -182,6 +191,8 @@
             <li><a href="https://www.youtube.com/watch?v=iXTku78meNM"><i>Cuarta Clase Grid</i>. (18 de enero de 2019). Falcon Masters</a></li>
             <li><a href="https://www.youtube.com/watch?v=GUXYOsbKYoY"><i>Quinta Clase Grid</i>. (18 de enero de 2019). Falcon Masters</a></li>
             <li><a href="https://www.youtube.com/watch?v=AH37dD8eTzI"><i>Sexta Clase Grid</i>. (19 de enero de 2019). Falcon Masters</a></li>
+            <li><a href="https://www.youtube.com/watch?v=5oRA6RwKoBQ"><i>Septima Clase Grid</i>. (19 de enero de 2019). Falcon Masters</a></li>
+            <li><a href="https://www.youtube.com/watch?v=FQU2zeHzll0"><i>Octava Clase Grid</i>. (21 de enero de 2019). Falcon Masters</a></li>
          </ul>
       </section>
 
@@ -834,7 +845,7 @@
          </p>
          <code>
             <pre>
-               #align-test {
+               #alignItems-test {
                   display: grid;
                  
                   grid-gap: 20px;
@@ -848,12 +859,317 @@
                }</pre>
          </code>
 
-         <div id="align-test" class="container">
+         <div id="alignItems-test" class="container">
             <div id="item-start">Start</div>
             <div id="item-end">End</div>
             <div id="item-stretch">Stretch</div>
             <div id="item-center">Center</div>
          </div>
+      </section>
+
+      <section>
+         <h3 id="ClasesGrid-SeptimaClase">Septima Clase</h3>
+         <p>
+            Algunas veces en nuestro Grid Container se va a tener un espacio extra en el que podemos usar para alinear los Grid tracks del Grid Layout.
+         </p>
+         <h4 id="ClasesGrid-SeptimaClase_AlineacionTracks">Alineación de los Grid Tracks</h4>
+         <p>
+            Se usan dos propiedades como para alinear los items, pero esta vez enfocado a los Grid Tracks. 
+         </p>
+         <p>
+            Pero ojo, es necesario tener estos espacios, ya que sin estos, ninguna de estas propiedades va a funcionar correctamente.
+         </p>
+
+         <h5>justify-content:  </h5>
+         <p>
+            Se usa para alinear los Grid Tracks de forma horizontal. Se pueden usar los siguientes valores:
+         </p>
+         <ul>
+            <li>
+               <strong>Start / Normal</strong>: Deja los Grid Tracks horizontalmente en el inicio del Grid Container.
+            </li>
+            <li>
+               <strong>End</strong>: Deja los Grid Tracks horizontalmente en el final del Grid Container.
+            </li>
+            <li>
+               <strong>Stretch</strong>: Se estrian los Grid Tracks horizontalmente para ocupar todo el Grid Container.
+            </li>
+            <li>
+               <strong>Space-Around</strong>: Deja un espaciado igual entre cada Grid Track horizontalmente, dejando un la mitad de ese espacio para el final y inicio del Grid Container. 
+            </li>
+            <li>
+               <strong>Space-Between</strong>: Deja los Grid Tracks repartidos horizontalmente entre todo el Grid Container.
+            </li>
+            <li>
+               <strong>Space-Evenly</strong>: Deja un espaciado igual entre cada Grid Track y el Grid Container horizontalmente.
+            </li>
+         </ul>
+         <h5>align-content:  </h5>
+         <p>
+            Se usa para alinear los Grid Tracks de forma vertical. Se pueden usar los siguientes valores:
+         </p>
+         <ul>
+            <li>
+               <strong>Start / Normal</strong>: Deja los Grid Tracks verticalmente en el inicio del Grid Container.
+            </li>
+            <li>
+               <strong>End</strong>: Deja los Grid Tracks verticalmente en el final del Grid Container.
+            </li>
+            <li>
+               <strong>Stretch</strong>: Se estrian los Grid Tracks verticalmente para ocupar todo el Grid Container.
+            </li>
+            <li>
+               <strong>Space-Around</strong>: Deja un espaciado igual entre cada Grid Track verticalmente dejando un la mitad de ese espacio para el final y inicio del Grid Container. 
+            </li>
+            <li>
+               <strong>Space-Between</strong>: Deja los Grid Tracks repartidos verticalmente entre todo el Grid Container.
+            </li>
+            <li>
+               <strong>Space-Evenly</strong>: Deja un espaciado igual entre cada Grid Track y el Grid Container verticalmente.
+            </li>
+         </ul>
+         <p>
+            Ejemplos de los valores:
+         </p>
+         <h4>Start</h4>
+         <code>
+            <pre>
+               #alignTrack_start-test {
+                  width: 30em;
+                  height: 30em;
+                 
+                  display: grid;
+                 
+                  grid-gap: 1em;
+                  grid-template-columns: repeat(3, 5em);
+                  grid-template-rows: repeat(3, 5em);
+                 
+                  justify-content: start;
+                  align-content: start;
+               }</pre>
+         </code>
+         <div id="alignTrack_start-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
+
+         <h4>End</h4>
+         <code>
+            <pre>
+               #alignTrack_end-test {
+                  width: 30em;
+                  height: 30em;
+                 
+                  display: grid;
+                 
+                  grid-gap: 1em;
+                  grid-template-columns: repeat(3, 5em);
+                  grid-template-rows: repeat(3, 5em);
+                 
+                  justify-content: end;
+                  align-content: end;
+               }</pre>
+         </code>
+         <div id="alignTrack_end-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
+
+         <h4>Center</h4>
+         <code>
+            <pre>
+               #alignTrack_center-test {
+                  width: 30em;
+                  height: 30em;
+                 
+                  display: grid;
+                 
+                  grid-gap: 1em;
+                  grid-template-columns: repeat(3, 5em);
+                  grid-template-rows: repeat(3, 5em);
+                 
+                  justify-content: center;
+                  align-content: center;
+               }</pre>
+         </code>
+         <div id="alignTrack_center-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
+
+         <h4>Space-Around</h4>
+         <code>
+            <pre>
+               #alignTrack_spaceAround-test {
+                  width: 30em;
+                  height: 30em;
+                 
+                  display: grid;
+                 
+                  grid-gap: 1em;
+                  grid-template-columns: repeat(3, 5em);
+                  grid-template-rows: repeat(3, 5em);
+                 
+                  justify-content: space-around;
+                  align-content: space-around;
+               }</pre>
+         </code>
+         <div id="alignTrack_spaceAround-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
+
+         <h4>Space-Between</h4>
+         <code>
+            <pre>
+               #alignTrack_spaceBetween-test {
+                  width: 30em;
+                  height: 30em;
+                 
+                  display: grid;
+                 
+                  grid-gap: 1em;
+                  grid-template-columns: repeat(3, 5em);
+                  grid-template-rows: repeat(3, 5em);
+                 
+                  justify-content: space-between;
+                  align-content: space-between;
+               }</pre>
+         </code>
+         <div id="alignTrack_spaceBetween-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
+
+         <h4>Space-Evenly</h4>
+         <code>
+            <pre>
+               #alignTrack_spaceEvenly-test {
+                  width: 30em;
+                  height: 30em;
+                 
+                  display: grid;
+                 
+                  grid-gap: 1em;
+                  grid-template-columns: repeat(3, 5em);
+                  grid-template-rows: repeat(3, 5em);
+                 
+                  justify-content: space-evenly;
+                  align-content: space-evenly;
+               }
+            </pre>
+         </code>
+         <div id="alignTrack_spaceEvenly-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+         </div>
+      </section>
+
+      <section>
+         <h3 id="ClasesGrid-OctavaClase">Octava Clase</h3>
+         <p>
+            En Grid Layout, hemos visto que algunos elementos quedan a la perfección dentro de un Grid o una cuadricula, estas cuadriculas se les conoce 
+            como Grid Explicitas. Siembargo, al momento de añadir solo un elemento más a esta cuadricula, puede romper el orden y diseño de la cuadricula. 
+            Quedando desorganizado o diferente a el tamaño y propiedades de las columnas y rows del Grid Container. Para evitar esto podemos usar la siguiente 
+            propiedad:
+         </p>
+
+         <h4 id="ClasesGrid-OctavaClase_GridAuto">Grid-auto-columns/rows: </h4>
+         <p>
+            Con esta propiedad podemos indicar que tamaño van a tener cada nuevo elemento que sea ingresado a un Grid Container, y que este rompa el orden y diseño 
+            del Grid Layout. Podemos definir el tamaño de la columna o fila en la que se va a guardar este nuevo elemento. Ejemplo
+         </p>
+         <code>
+            <pre>
+               #gridAuto-test {
+                  display: grid;
+               
+                  grid-gap: 1em;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  grid-template-rows: 5em 3em 5em;
+                  grid-auto-rows: 10em; /* Tamaño para los Hellos en las nuevas Rows */
+               }</pre>
+         </code>
+         <div id="gridAuto-test" class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>Hello</div>
+            <div>Hello</div>
+            <div>Hello</div>
+         </div>
+
+         <p>
+            Pero como sé si el elemento se va a añadir en una nueva columna o en una nueva fila? Es algo sencillo, usando otra propiedad podemos 
+            cambiar el flujo de los Grid Items, es decir, cambiar la forma en la que se organizan en el Grid Container. Para esto, se usa la propiedad:
+         </p>
+
+         <h4 id="ClasesGrid-OctavaClase_GridFlow">grid-auto-flow:  </h4>
+         <p>
+            Se usa esta propiedad para determinar el flujo o la forma en que se van a organizar los elementos del Grid o Grid Items. Esto se puede usar solo 
+            para organizar los Elementos de una forma vertical o en columnas, o de una forma horizontal o en filas. Para esta propiedad se le puede dar los siguientes 
+            valores:
+         </p>
+         <ul>
+            <li>
+               <strong>row</strong>: Organiza los Grid Items en filas, cuanto esta llega a el número total de columnas, se crea otra fila para los demas elementos. 
+            </li>
+            <li>
+               <strong>column</strong>: Organiza los Grid Items en columnas, cuanto esta llega a el número total de filas, se crea otra columna para los demas elementos.
+            </li>
+            <li>
+               <strong>dense row/column</strong>: Organiza los Grid Items en columnas o en filas pero en caso, que por algun span de cualquier Grid Item, se genere 
+               un espacio vacio en el Grid Container, se va a rellenar este con un elemento que pueda entrar ahí. Creando un grid más organizado y menos vacio.
+            </li>
+         </ul>
       </section>
    </main>
 </body>
