@@ -80,6 +80,10 @@
                <li><a href="#ClasesGrid-NovenaClase_AutoFill">Auto Fill</a></li>
                <li><a href="#ClasesGrid-NovenaClase_AutoFit">Auto Fit</a></li>
             </ol>
+            <li><a href="#ClasesGrid-SubGrid">Novena Clase</a></li>
+            <ol>
+               <li><a href="#ClasesGrid-SubGrid_ComoUsarSubGrid">Cómo Usar SubGrid</a></li>
+            </ol>
          </ol>
       </nav>
       
@@ -199,6 +203,7 @@
             <li><a href="https://www.youtube.com/watch?v=5oRA6RwKoBQ"><i>Septima Clase Grid</i>. (19 de enero de 2019). Falcon Masters</a></li>
             <li><a href="https://www.youtube.com/watch?v=FQU2zeHzll0"><i>Octava Clase Grid</i>. (21 de enero de 2019). Falcon Masters</a></li>
             <li><a href="https://www.youtube.com/watch?v=hPd93mijFCM"><i>Novena Clase Grid</i>. (21 de enero de 2019). Falcon Masters</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Rl7uDMSycyQ"><i>Clase Extra; SubGrid</i>. (2 de julio de 2020). Falcon Masters</a></li>
          </ul>
       </section>
 
@@ -1249,6 +1254,435 @@
             <div>3</div>
             <div>4</div>
          </div>
+      </section>
+
+      <section>
+         <h3 id="ClasesGrid-SubGrid">Clase Extra | Sub Grid</h3>
+         <p>
+            Al momento de hacer una cuadricula en Grid, en nuestros Grid Items, se pueden ser algo como un articulo, pero estos casí siempre no van a 
+            ser iguales. Ya que puede que un titulo o un parrafo de entrada sea más pequeño o grande, esto lo podemos arreglar agregando <mark>Sub Grid</mark>
+            a estos elementos.
+         </p>
+         <p>
+            <strong>Pero Ojo, esta propiedad a la fecha de hoy 05/02/2021 (mm/dd/aaaa), esta función solo se encuentra disponible para el navegador <mark>FireFox</mark></strong>
+         </p>
+         <p>
+            Para usar SubGrid, en cualquier navegador, podemos hacer uso de valorres, columnas, filas iguales que no va a cambiar el resultado de navegador a navegador. 
+            Excepto si es <abbr title="Internet Explorer">IE</abbr>, nadie quiere a <abbr title="Internet Exporer">IE</abbr>.
+         </p>
+
+         <h4 id="ClasesGrid-SubGrid_ComoUsarSubGrid">¿Cómo Usar SubGrid?</h4>
+         <p>
+            Para usar correctamente SubGrid, necesitamos un Grid Container que tenga varios elementos que tengan contenido similares, o que deban ser organizados 
+            de una misma forma. Como por ejemplo los articulos de un portal de noticas, por ahora solo vamos a ver cómo son los elementos sencillos. Pero algunas 
+            veces estos ariculos tienen un titulo más largo, una introducción más larga, o puede que sus likes, comentarios y demás dañen el orden y espacio de 
+            las columnas del articulo, siendo un poco más a la izquierda y a la derecha en diferentes articulos.
+         </p>
+         <p>
+            Un Ejemplo de donde podemos inicar es: 
+         </p>
+         <code>
+            <pre>
+               #subgrid_1-test {
+                  border: 0.1em solid #ccc;
+                  padding: 1em;
+                 
+                  background-color: #efefef;
+                 
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-gap: 1em;
+                 
+                  .publicacion {
+                     background-color: #fefefe;
+                     padding: 0.5em;
+                 
+                     .title {
+                        font: 800 1.5em 'Roboto Mono', monospace;
+                     }
+
+                     .texto {
+                        font: 500 1em 'Roboto', sans-serif;
+                     }
+                  
+                     .data-articulo {
+                     
+                        button {
+                           border: none;
+                     
+                           background-color: inherit;
+                     
+                           font: 800 0.8em 'Roboto', sans-serif;
+                     
+                           span.comentario {
+                              text-decoration: underline solid #555 0.2em;
+                           }
+                           span.likes {
+                              text-decoration: underline solid #c00 0.2em;
+                           }
+
+                           span.retweets {
+                              text-decoration: underline solid #0df 0.2em;
+                           }
+                        }
+                     }
+                  }
+               }</pre>
+         </code>
+         <div id="subgrid_1-test">
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+               <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequuntur incidunt consequatur repellendus culpa tenetur!</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 1000</button>
+                  <button><span class="likes">Likes:</span> 1000</button>
+                  <button><span class="retweets">Retweets:</span> 1000</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, autem? Lorem, ipsum dolor. Lorem, ipsum.</h2>
+               <p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi et iure pariatur nulla esse. Vitae quos aperiam ex obcaecati esse sequi, reprehenderit dolores necessitatibus expedita.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 100.012.412</button>
+                  <button><span class="likes">Likes:</span> 100.124.134</button>
+                  <button><span class="retweets">Retweets:</span> 100.564.123</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+               <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus beatae blanditiis laudantium tempora! Omnis molestiae, assumenda autem, odio dolore officiis necessitatibus perferendis tempore ad in ut eos quas eius corporis, eum suscipit aperiam exercitationem mollitia nisi. Quisquam tenetur, qui quia impedit est saepe vero facere? Voluptatem consequuntur saepe quae.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 1</button>
+                  <button><span class="likes">Likes:</span> 10</button>
+                  <button><span class="retweets">Retweets:</span> 25</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, autem?</h2>
+               <p class="texto">Lorem ipsum dolor sit amet.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 412</button>
+                  <button><span class="likes">Likes:</span> 4</button>
+                  <button><span class="retweets">Retweets:</span> 123</button>
+               </div>
+            </div>
+         </div>
+
+         <p>
+            Como podemos ver algunos articulos tienen un titulo más corto, una introducción más larga y muchos más likes, comentarios y retweets. Esto hace que 
+            cada articulo no sean parejos uno del otro, para evitar esto vamos a hacer uso de SubGrid.
+         </p>
+         <p>
+            Para empezar a ver como vamos a aplicar subgrid, vamos a ver como esta diseñada el Grid Layout, en este tiene 2 columnas y filas indefenidas o infinitas.
+            Vamos a intentar organizar las filas de cada Grid Item, y para esto vamos a definir las filas dentro de las publicaciones así:
+         </p>
+         <code>
+            <pre>
+               #subgrid-test {
+                  display: grid;
+
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(1, auto 1fr auto)
+               }
+            </pre>
+         </code>
+         <p>
+            Esto hara que las filas extra siempre sean de 3 filas, es decir las filas que necesitamos que se usen dentro del Grid Items. <strong>Pero esto no va a romper 
+            los Grid Items?</strong> Sí, para evitar esto, vamos a definir que cada uno de estos elementos tenga un <strong>span</strong> de 3 o las filas que hayamos puesto.
+            Ejemplo: 
+         </p>
+         <code>
+            <pre>
+               #subgrid-test {
+                  display: grid;
+                  
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(3, auto 1fr auto)
+
+                  .publicacion {
+                     grid-rows: span 3;
+                  }
+               }
+            </pre>
+         </code>
+         <p>
+            <strong>Pero todavía no sean organizado los contenidos del Grid Item!</strong> Perate', ahora vamos a voler estos Grid Items un <strong>display: grid;</strong>
+            Para que pueda tomar los valores del <strong>SubGrid</strong>, para esto si estamos en <mark>FireFox</mark>, simplemente debemos agregar: 
+         </p>
+         <code>
+            <pre>
+               .publicacion {
+                  display: grid;
+
+                  grid-row: span 3;
+                  grid-template-rows: subgrid;
+               }
+            </pre>
+         </code>
+         <p>
+            Para que funcione en todos los navegadores, vamos a tener que agregar otro valor de <strong>grid-template-rows: </strong>, siendo este:
+         </p>
+         <code>
+            <pre>
+               .publicacion {
+                  display: grid; 
+                  
+                  grid-row: span 3;
+                  grid-template-rows: auto 1fr auto; /* El mismo valor que en el Grid Container */
+                  grid-template-rows: subgrid; /* Valor para los usuarios de FireFox */
+               }
+            </pre>
+         </code>
+         <p>
+            Listo!!! Ahora veamos como sería todo el ejemplo de como se organizan las filas dentro del Grid Item usando SubGrid. 
+         </p>
+         <code>
+            <pre>
+               #subgrid_2-test {
+                  border: 0.1em solid #ccc;
+                  padding: 1em;
+                 
+                  background-color: #efefef;
+                 
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(1, auto 1fr auto);
+                  grid-gap: 1em;
+                 
+                  .publicacion {
+                     padding: 0.5em;
+                 
+                     background-color: #fefefe;
+                  
+                     display: grid;
+                  
+                     grid-row: span 3;
+                     grid-template-rows: auto 1fr auto;
+                     grid-template-rows: subgrid; /* Fire Fox Browsers Only */
+                  
+                     .title {
+                        font: 800 1.2em 'Roboto Mono', monospace;
+                     }
+                     .texto {
+                        font: 500 1em 'Roboto', sans-serif;
+                     }
+                 
+                     .data-articulo {
+                    
+                        button {
+                           border: none;
+                 
+                           background-color: inherit;
+                 
+                           font: 800 0.8em 'Roboto', sans-serif;
+                     
+                           span.comentario {
+                              text-decoration: underline solid #555 0.2em;
+                           }
+                           span.likes {
+                              text-decoration: underline solid #c00 0.2em;
+                           }
+                           span.retweets {
+                              text-decoration: underline solid #0df 0.2em;
+                           }
+                        }
+                     }
+                  }
+               }</pre>
+         </code>
+         <div id="subgrid_2-test">
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+               <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequuntur incidunt consequatur repellendus culpa tenetur!</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 1000</button>
+                  <button><span class="likes">Likes:</span> 1000</button>
+                  <button><span class="retweets">Retweets:</span> 1000</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, autem? Lorem, ipsum dolor. Lorem, ipsum.</h2>
+               <p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi et iure pariatur nulla esse. Vitae quos aperiam ex obcaecati esse sequi, reprehenderit dolores necessitatibus expedita.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 100.012.412</button>
+                  <button><span class="likes">Likes:</span> 100.124.134</button>
+                  <button><span class="retweets">Retweets:</span> 100.564.123</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+               <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus beatae blanditiis laudantium tempora! Omnis molestiae, assumenda autem, odio dolore officiis necessitatibus perferendis tempore ad in ut eos quas eius corporis, eum suscipit aperiam exercitationem mollitia nisi. Quisquam tenetur, qui quia impedit est saepe vero facere? Voluptatem consequuntur saepe quae.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 1</button>
+                  <button><span class="likes">Likes:</span> 10</button>
+                  <button><span class="retweets">Retweets:</span> 25</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, autem?</h2>
+               <p class="texto">Lorem ipsum dolor sit amet.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 412</button>
+                  <button><span class="likes">Likes:</span> 4</button>
+                  <button><span class="retweets">Retweets:</span> 123</button>
+               </div>
+            </div>
+         </div>
+         <p>
+            Ahora no se ve tan tan bien y organizado el titulo con el texto, pero esto <strong>pasa ya que mi navegador y varios otros no soportan subgrid, esto es lo maximo 
+            que podemos hacer en estos casos</strong>. Pero hey almenos esta un poco más organizado que como si no lo tuviera.
+         </p>
+         <p>
+            Pero ahora faltan las columnas, para esto vamos a hacer un proceso parecido, pero aplicado a las columnas de los Grid Items, del Grid Container y demás.
+         </p>
+         <p>
+            Podemos ver que los comentarios, likes y retweets no estan bien alineados, para solucionar vamos a ver cuantas columnas necesitamos dentro de estos 
+            Grid Items, que en este caso serían 3 columnas, como tenemos que definir este número en el Grid Container, lo multiplicamos por la cantidad de 
+            columnas que ya tiene este. En este caso serían 2 columnas del Grid Container por 3 columnas que se necesitan en el Grid Item, dando 6 columnas. 
+            Podemos definirlas de esta forma:
+         </p>
+         <code>
+            <pre>
+               #subgrid-test {
+                  display: grid;
+
+                  grid-template-columns: repeat(6, 1fr);
+                  grid-template-rows: repeat(1, auto 1fr auto);
+               }
+            </pre>
+         </code>
+         <p>
+            Como con las filas, esto va a romper a los Grid Items, para evitar esto, vamos a decirles que ocupen con un <strong>span</strong> 3 o las 
+            columnas necesitadas por cada Grid Item.
+         </p>
+         <code>
+            <pre>
+               #subgrid-test {
+                  display: grid;
+      
+                  grid-template-columns: repeat(6, 1fr);
+                  grid-template-rows: repeat(1, auto 1fr auto);
+
+                  .publicaciones {
+                     grid-column: span 3;
+                  }
+               }
+            </pre>
+         </code>
+         <p>
+            Listo, ahora vamos a organizar los elementos dentro del Grid Item, pero para esto vamos a modificar directamente los comentarios, likes y retweets, que 
+            estan en un div.
+         </p>
+         <code>
+            <pre>
+               .publicaciones {
+                  grid-column: span 3;
+
+                  .data-articulo {
+                     display: grid;
+
+                     grid-column: span 3;
+                     grid-template-columns: subgrid;
+                  }
+               }
+            </pre>
+         </code>
+         <p>
+            Esto va a hacer que ahora los demas elementos como el titulo y el texto se rompan, para evitar esto, usamos el <strong>span</strong> para que cubran las 
+            3 columnas. 
+         </p>
+         <code>
+            <pre>
+               .publicaciones {
+                  grid-column: span 3;
+
+                  .title {
+                     grid-column: span 3;
+                  }
+
+                  .texto {
+                     grid-column: span 3;
+                  }
+      
+                  .data-articulo {
+                     display: grid;
+      
+                     grid-column: span 3;
+                     grid-template-columns: repeat(3, 1fr);
+                     grid-template-columns: subgrid;
+                  }
+               }
+            </pre>
+         </code>
+         <p>
+            Pero de donde esta sacando el div de los comentarios, likes y retweets las columnas para alinearse? de hecho no lo esta haciendo, las definimos cómo las filas 
+            en el Grid Item.
+         </p>
+         <code>
+            <pre>
+               .publicaciones {
+                  /* Rows */
+                  grid-row: span 3;
+                  grid-template-rows: auto 1fr auto; /* Filas necesitadas en el Grid Item */
+                  grid-template-rows: subgrid; /* Subgrid para FireFox */
+
+                  /* Columns */
+                  grid-column: span 3;
+                  grid-template-columns: repeat(3, 1fr); /* Columnas necesitadas en el Grid Item */
+                  grid-template-columns: subgrid; /* Subgrid para FireFox */
+               }
+            </pre>
+         </code>
+         <p>
+            Listo, otravez !!! ahora veamos como queda todo el contenido del Grid Item lo mayormente posible organizado en un navegador que no soporta SubGrid.
+         </p>
+         <code>
+            <pre>
+
+            </pre>
+         </code>
+         <div id="subgrid_3-test">
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet.</h2>
+               <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequuntur incidunt consequatur repellendus culpa tenetur!</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 1000</button>
+                  <button><span class="likes">Likes:</span> 1000</button>
+                  <button><span class="retweets">Retweets:</span> 1000</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, autem?</h2>
+               <p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi et iure pariatur nulla esse. Vitae quos aperiam ex obcaecati esse sequi, reprehenderit dolores necessitatibus expedita.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 100.012.412</button>
+                  <button><span class="likes">Likes:</span> 100.124.134</button>
+                  <button><span class="retweets">Retweets:</span> 100.564.123</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h2>
+               <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus beatae blanditiis laudantium tempora! Omnis molestiae, assumenda autem, odio dolore officiis necessitatibus perferendis tempore ad in ut eos quas eius corporis, eum suscipit aperiam exercitationem mollitia nisi. Quisquam tenetur, qui quia impedit est saepe vero facere? Voluptatem consequuntur saepe quae.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 1</button>
+                  <button><span class="likes">Likes:</span> 10</button>
+                  <button><span class="retweets">Retweets:</span> 25</button>
+               </div>
+            </div>
+            <div class="publicacion">
+               <h2 class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, autem?</h2>
+               <p class="texto">Lorem ipsum dolor sit amet.</p>
+               <div class="data-articulo">
+                  <button><span class="comentario">Comentarios:</span> 412</button>
+                  <button><span class="likes">Likes:</span> 4</button>
+                  <button><span class="retweets">Retweets:</span> 123</button>
+               </div>
+            </div>
+         </div>
+         <p>
+            Todavía sigue siendo un poco imperfecto, pero es lo suficiente como para pasar, dejando así nuestro diseño definitivo de SubGrid sin usar SubGrid. 
+            Depronto en <mark>Fire Fox</mark>, se podra ver de una mejor forma.
+         </p>  
       </section>
    </main>
 </body>

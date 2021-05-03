@@ -281,3 +281,165 @@
  grid-gap: 1em;
  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
 }
+
+#subgrid_1-test {
+ border: 0.1em solid #ccc;
+ padding: 1em;
+
+ background-color: #efefef;
+
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-gap: 1em;
+
+ .publicacion {
+  padding: 0.5em;
+
+  background-color: #fefefe;
+
+  .title {
+   font: 800 1.2em 'Roboto Mono', monospace;
+  }
+  .texto {
+   font: 500 1em 'Roboto', sans-serif;
+  }
+
+  .data-articulo {
+   
+   button {
+    border: none;
+
+    background-color: inherit;
+
+    font: 800 0.8em 'Roboto', sans-serif;
+
+    span.comentario {
+     text-decoration: underline solid #555 0.2em;
+    }
+    span.likes {
+     text-decoration: underline solid #c00 0.2em;
+    }
+    span.retweets {
+     text-decoration: underline solid #0df 0.2em;
+    }
+   }
+  }
+ }
+}
+
+#subgrid_2-test {
+ border: 0.1em solid #ccc;
+ padding: 1em;
+
+ background-color: #efefef;
+
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ grid-template-rows: repeat(1, auto 1fr auto);
+ grid-gap: 1em;
+
+ .publicacion {
+  padding: 0.5em;
+
+  background-color: #fefefe;
+
+  display: grid;
+
+  grid-row: span 3;
+  grid-template-rows: auto 1fr auto;
+  grid-template-rows: subgrid; /* Fire Fox Browsers Only */
+
+  .title {
+   font: 800 1.2em 'Roboto Mono', monospace;
+  }
+  .texto {
+   font: 500 1em 'Roboto', sans-serif;
+  }
+
+  .data-articulo {
+   
+   button {
+    border: none;
+
+    background-color: inherit;
+
+    font: 800 0.8em 'Roboto', sans-serif;
+
+    span.comentario {
+     text-decoration: underline solid #555 0.2em;
+    }
+    span.likes {
+     text-decoration: underline solid #c00 0.2em;
+    }
+    span.retweets {
+     text-decoration: underline solid #0df 0.2em;
+    }
+   }
+  }
+ }
+}
+
+#subgrid_3-test {
+ border: 0.1em solid #ccc;
+ padding: 1em;
+
+ background-color: #efefef;
+
+ display: grid;
+ grid-template-columns: repeat(6, 1fr);
+ grid-template-rows: repeat(1, auto 1fr auto);
+ grid-gap: 1em;
+
+ .publicacion {
+  padding: 0.5em;
+
+  background-color: #fefefe;
+
+  display: grid;
+
+  grid-row: span 3;
+  grid-template-rows: auto 1fr auto;
+  grid-template-rows: subgrid;
+
+  grid-column: span 3;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: subgrid;
+
+  .title {
+   font: 800 1.2em 'Roboto Mono', monospace;
+
+   grid-column: span 3;
+  }
+  .texto {
+   font: 500 1em 'Roboto', sans-serif;
+
+   grid-column: span 3;
+  }
+  
+  .data-articulo {
+   display: grid; 
+
+   grid-column: span 3;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: subgrid;
+   
+   button {
+    border: none;
+
+    background-color: inherit;
+
+    font: 800 0.8em 'Roboto', sans-serif;
+
+    span.comentario {
+     text-decoration: underline solid #555 0.2em;
+    }
+    span.likes {
+     text-decoration: underline solid #c00 0.2em;
+    }
+    span.retweets {
+     text-decoration: underline solid #0df 0.2em;
+    }
+   }
+  }
+ }
+}
