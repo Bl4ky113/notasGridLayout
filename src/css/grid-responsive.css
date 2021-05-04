@@ -10,14 +10,14 @@
   display: grid;
   grid-template: auto 1fr auto auto/repeat(2, 1fr) minmax(auto, 20em);
   grid-gap: 1em;
+  grid-template-areas: "header header header" "main   main   aside " "nav    widget aside " "footer footer footer";
 }
 
 header {
   border-radius: 0.5em;
   padding: 1em;
   background-color: darkblue;
-  grid-column: 1/-1;
-  grid-row: span 1;
+  grid-area: header;
 }
 header .header__title {
   color: white;
@@ -32,9 +32,8 @@ main {
   display: grid;
   grid-template: repeat(1, 1fr)/repeat(2, 1fr);
   grid-auto-flow: dense row;
-  grid-gap: 0 0.5em;
-  grid-column: span 2;
-  grid-row: span 1;
+  grid-gap: 0.5em;
+  grid-area: main;
 }
 main .content__title {
   margin: 0.2em 0;
@@ -51,8 +50,8 @@ main .content__paragraph {
   grid-column: 1/-1;
 }
 main article {
-  border-left: 0.2em solid darkblue;
-  border-right: 0.2em solid darkblue;
+  border: 1px solid rgba(0, 50, 255, 0.3);
+  border-radius: 0.5em;
   padding: 1em;
   grid-column: span 1;
 }
@@ -73,8 +72,7 @@ aside {
   border-radius: 0.5em;
   padding: 1em;
   background-color: rgba(0, 100, 255, 0.6);
-  grid-column: -2/-1;
-  grid-row: span 2;
+  grid-area: aside;
 }
 aside .aside__title {
   margin: 0.25em 0;
@@ -91,8 +89,7 @@ nav {
   border-radius: 0.25em;
   padding: 1.5em;
   background-color: rgba(0, 50, 255, 0.3);
-  grid-column: span 1;
-  grid-row: span 1;
+  grid-area: nav;
 }
 nav .nav__title {
   color: black;
@@ -107,8 +104,7 @@ nav .nav__link {
   border-radius: 0.25em;
   padding: 1.5em;
   background-color: rgba(0, 0, 255, 0.5);
-  grid-column: span 1;
-  grid-row: span 1;
+  grid-area: widget;
 }
 .widget .widget__title {
   color: black;
@@ -123,8 +119,7 @@ footer {
   border-radius: 0.5em;
   padding: 2em 1em;
   background-color: darkblue;
-  grid-column: 1/-1;
-  grid-row: -2/-1;
+  grid-area: footer;
 }
 footer .footer__title {
   color: white;
