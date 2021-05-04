@@ -260,7 +260,7 @@ footer div.socialmedia {
 
 @media screen and (max-width: 800px) {
   .container {
-    font-size: 18px;
+    font-size: 14px;
   }
   .container footer {
     grid-template-areas: "title       title       title" "text        text        text" "reference   reference   reference" "portfolio   portfolio   portfolio" "socialmedia socialmedia socialmedia";
@@ -268,6 +268,6 @@ footer div.socialmedia {
 }
 @media screen and (max-width: 650px) {
   .container {
-    font-size: 20px;
+    font-size: 12px;
   }
 }

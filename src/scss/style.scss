@@ -343,8 +343,8 @@ footer {
 
 @media screen and (max-width: 800px) {
  .container {
-  font-size: 18px; 
-  
+  font-size: 14px; 
+
   footer {
    grid-template-areas: "title       title       title"
                         "text        text        text"
@@ -357,7 +357,7 @@ footer {
 
 @media screen and (max-width: 650px) {
  .container {
-  font-size: 20px;
+  font-size: 12px;
 
  }
 }
