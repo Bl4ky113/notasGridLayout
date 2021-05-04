@@ -245,8 +245,6 @@ main {
 
   /* Tests and Examples */
   div.container {
-   width: 80%;
-   max-width: 1000px;
    
    margin: 0.5em auto;
    border: 0.8em solid $color-darker;
@@ -344,6 +342,13 @@ footer {
 @media screen and (max-width: 800px) {
  .container {
   font-size: 14px; 
+
+  main {
+
+   nav {
+    max-width: 90%;
+   }
+  }
 
   footer {
    grid-template-areas: "title       title       title"

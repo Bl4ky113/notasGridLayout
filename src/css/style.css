@@ -186,8 +186,6 @@ main section mark {
   background-color: rgba(121, 255, 121, 0.5);
 }
 main section div.container {
-  width: 80%;
-  max-width: 1000px;
   margin: 0.5em auto;
   border: 0.8em solid #005500;
 }
@@ -261,6 +259,9 @@ footer div.socialmedia {
 @media screen and (max-width: 800px) {
   .container {
     font-size: 14px;
+  }
+  .container main nav {
+    max-width: 90%;
   }
   .container footer {
     grid-template-areas: "title       title       title" "text        text        text" "reference   reference   reference" "portfolio   portfolio   portfolio" "socialmedia socialmedia socialmedia";
