@@ -185,6 +185,8 @@ footer {
 
 @media screen and (max-width: 800px) {
  .container {
+  padding: 1em;
+
   grid-template-areas: "header header header"
                        "main   main   main"
                        "aside  aside  aside"
@@ -201,6 +203,8 @@ footer {
 
 @media screen and (max-width: 650px) {
  .container {
+  padding: 0.5em;
+
   grid-template-areas: "header header header"
                        "main   main   main  "
                        "aside  aside  aside "

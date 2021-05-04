@@ -141,6 +141,7 @@ footer .footer__paragraph {
 
 @media screen and (max-width: 800px) {
   .container {
+    padding: 1em;
     grid-template-areas: "header header header" "main   main   main" "aside  aside  aside" "nav    nav    widget" "footer footer footer";
     font-size: 14px;
   }
@@ -151,6 +152,7 @@ footer .footer__paragraph {
 }
 @media screen and (max-width: 650px) {
   .container {
+    padding: 0.5em;
     grid-template-areas: "header header header" "main   main   main  " "aside  aside  aside " "nav    nav    nav   " "widget widget widget" "footer footer footer";
     font-size: 12px;
   }
