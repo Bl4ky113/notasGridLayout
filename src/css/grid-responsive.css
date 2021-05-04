@@ -87,6 +87,38 @@ aside .aside__paragraph {
   font: 600 1em "Roboto", sans-serif;
 }
 
+nav {
+  border-radius: 0.25em;
+  padding: 1.5em;
+  background-color: rgba(0, 50, 255, 0.3);
+  grid-column: span 1;
+  grid-row: span 1;
+}
+nav .nav__title {
+  color: black;
+  font: 600 1.2em "Roboto Mono", monospace;
+}
+nav .nav__link {
+  color: darkblue;
+  font: 500 1em "Roboto", sans-serif;
+}
+
+.widget {
+  border-radius: 0.25em;
+  padding: 1.5em;
+  background-color: rgba(0, 0, 255, 0.5);
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.widget .widget__title {
+  color: black;
+  font: 600 1.2em "Roboto Mono", monospace;
+}
+.widget .widget__paragraph {
+  color: black;
+  font: 400 1em "Roboto", sans-serif;
+}
+
 footer {
   border-radius: 0.5em;
   padding: 2em 1em;
