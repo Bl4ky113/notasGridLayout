@@ -7,7 +7,7 @@
 
  display: grid;
 
- grid-template: auto 1fr 1fr auto / repeat(2, 1fr) minmax(auto, 20em);
+ grid-template: auto 1fr auto auto / repeat(2, 1fr) minmax(auto, 20em);
  grid-gap: 1em;
 }
 
@@ -17,7 +17,8 @@ header {
 
  background-color: darkblue;
 
- grid-column: span 3;
+ grid-column: 1 / -1;
+ grid-row: span 1;
  
  .header__title {
   color: white;
@@ -39,6 +40,7 @@ main {
  grid-gap: 0 0.5em;
 
  grid-column: span 2;
+ grid-row: span 1;
 
  .content__title {
   margin: 0.2em 0;
@@ -92,6 +94,9 @@ aside {
 
  background-color: rgba(0, 100, 255, 0.6);
 
+ grid-column: -2 / -1;
+ grid-row: span 2;
+
  .aside__title {
   margin: 0.25em 0;
   border-bottom: 0.2em solid darkblue;
@@ -103,5 +108,25 @@ aside {
  .aside__paragraph {
   color: black;
   font: 600 1em 'Roboto', sans-serif;
+ }
+}
+
+footer {
+ border-radius: 0.5em;
+ padding: 2em 1em;
+
+ background-color: darkblue;
+
+ grid-column: 1 / -1;
+ grid-row: -2 / -1;
+
+ .footer__title {
+  color: white;
+  font: 800 1.2em 'Roboto', sans-serif;
+ }
+
+ .footer__paragraph {
+  color: #ddd;
+  font: 500 1em 'Roboto', sans-serif;
  }
 }
