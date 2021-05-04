@@ -1759,6 +1759,55 @@
          <a href="./grid-responsive.html" target="_blank">
             Para acceder a estos ejemplos puedes dar click acá
          </a>
+
+         <p>
+            Primero lo primero, vamos a crear una plantilla básica de Grid, con un header, un main, un aside, un nav, un widget y un footer. Vamos a darle un 
+            Style sencillo y vamos a agregarlo lo minimo de contenido.
+         </p>
+         <p>
+            He optado por intentar hacer una practica del ejercicio en la practica, haciendo un Grid Layout con articles dentro del main, vamos a ver como nos 
+            va al momento de volverlo responsive.
+         </p>
+         <p>
+            Listo, ahora que le hemos dado un style y una plantilla de Grid, vamos a aplicar el diseño responsive. Para esto vamos a usar el <strong>@media</strong>, 
+            para que nuestra página web cambie segun el ancho de la pantalla del usuario. Cambiando generalmente de grande 1000px o más, a mediano entre 650px y 1000px,
+            y pequeño, que es de 650px para abajo. Aún que podemos poner cuantos <strong>@media</strong> queramos, pero talvez no va a ayudar o hacer mucho la mayoria del tiempo haciendo esto.
+         </p>
+         <p>
+            Para ingresar un <strong>@media</strong> para el tamaño de la pantalla, se hace así:
+         </p>
+         <code>
+            <pre>
+               @media screen and (max-width: /* Número o medida de la pantalla */) {
+                  /* Styles que vamos a usar o cambiar */
+               }</pre>
+         </code>
+         <p>
+            Y como o que styles vamos a poner o cambiar en el <strong>@media</strong> para que nuestro Grid layout sea responsive? <strong>Vamos a cambiar a que el 
+            contenido o main ocupe todo el espacio o ancho de la pantalla y vamos a mover el side bar abajo de este en una nueva fila. Los widgets y el nav, los vamos a volver un poco más 
+            grandes, aún que podemos que cada uno ocupe una nueva fila</strong>. El Header y el Footer no van a tener un gran cambio, se van a mantener normal.
+         </p>
+
+         <p>
+            Pero ojo que podemos hacerlo de 2 formas que tienen cada una sus pros y contras.
+         </p>
+
+         <h4>Forma N°1: Definiendo las columnas y filas de cada elemento</h4>
+         <p>
+            Es una forma larga, que vamos a tener que usar varia lineas de style para poder aplicarla, pero esto nos va a dar una gran ventaja de que vamos a poder usar 
+            SubGrid, visto en las clases anteriores, cosa que nos puede ayudar al momento de diseñar nuestro sitio web.
+         </p>
+
+         <h4>Forma N°2: Definiendo las areas de los elementos</h4>
+         <p>
+            Es la forma más sencilla, ya que solo debemos definir las areas que va a tener el Grid Layout, pero esto no va a funcionar con cosas como la Grid Implicita, 
+            SubGrid y otros, pero para la entrada de un sitio web, es la mejor opcion posible.
+         </p>
+
+         <p>
+            En el ejemplo de sitio web <i>responsive</i> voy a intentar aplicar ambas, una del diseño del sitio web y la otra en el contenido de los articulos del 
+            contenido o del main.
+         </p>
       </section>
    </main>
 </body>
