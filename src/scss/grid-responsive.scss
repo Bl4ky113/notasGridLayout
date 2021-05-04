@@ -7,12 +7,14 @@
 
  display: grid;
 
- grid-template: auto 1fr auto auto / repeat(2, 1fr) minmax(auto, 20em);
+ grid-template: auto 1fr auto auto / repeat(2, 1fr) minmax(auto, 15em);
  grid-gap: 1em;
  grid-template-areas: "header header header"
                       "main   main   aside "
                       "nav    widget aside "
                       "footer footer footer";
+
+ font-size: 16px;
 }
 
 header {
@@ -166,5 +168,29 @@ footer {
  .footer__paragraph {
   color: #ddd;
   font: 500 1em 'Roboto', sans-serif;
+ }
+}
+
+@media screen and (max-width: 800px) {
+ .container {
+  grid-template-areas: "header header header"
+                       "main   main   main"
+                       "aside  aside  aside"
+                       "nav    nav    widget"
+                       "footer footer footer";
+
+  font-size: 16px;
+ }
+}
+
+@media screen and (max-width: 650px) {
+ .container {
+  grid-template-areas: "header header header"
+                       "main   main   main  "
+                       "aside  aside  aside "
+                       "nav    nav    nav   "
+                       "widget widget widget"
+                       "footer footer footer";
+  font-size: 16px;
  }
 }
