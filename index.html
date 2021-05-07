@@ -216,25 +216,24 @@
                Vamos a crear un style sencillo para las siguientes Clases y demás. Siendo este para estos ejemplos:
             </p>
             <code>
-               <pre>
-                  div.container {
-                     width: 80%;
-                     max-width: 1000px;
-                     
-                     margin: 0.5em auto;
-                     border: 0.8em solid $color-darker;
-                  }
-
-                  div.container > div {
-                     padding: 1em;
-               
-                     background-color: $color-lighter;
-                     box-shadow: 0.1em 0.1em 0.8em rgba($color: black, $alpha: 0.2);
-               
-                     color: white;
-                     font: 500 1.5em 'Roboto', sans-serif;
-                     text-align: center;
-                  }</pre>
+               div.container { <br>
+                  <span style="margin-left: 1em"></span>width: 80%; <br>
+                  <span style="margin-left: 1em"></span>max-width: 1000px; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>margin: 0.5em auto; <br>
+                  <span style="margin-left: 1em"></span>border: 0.8em solid $color-darker; <br>
+               } <br>
+               <br>
+               div.container > div { <br>
+                  <span style="margin-left: 1em"></span>padding: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>background-color: $color-lighter; <br>
+                  <span style="margin-left: 1em"></span>box-shadow: 0.1em 0.1em 0.8em rgba($color: black, $alpha: 0.2); <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>color: white; <br>
+                  <span style="margin-left: 1em"></span>font: 500 1.5em 'Roboto', sans-serif; <br>
+                  <span style="margin-left: 1em"></span>text-align: center; <br>
+               } <br>
             </code>
             <div class="container">
                <div>1</div>
@@ -251,12 +250,11 @@
 
             <h4 id="ClasesGrid-PrimeraClase_Columnas">Columnas</h4>
             <code>
-               <pre>
-                  #column-test {
-                     display: grid;
-                  
-                     grid-template-columns: 10em 10em 10em; 
-                  }</pre>
+               #column-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: 10em 10em 10em; <br>
+               }
             </code>
             <div id="column-test" class="container">
                <div>1</div>
@@ -273,13 +271,12 @@
                si se definen las columnas del Grid Layout, estos estaran mejor organizados.
             </p>
             <code>
-               <pre>
-                  #columnrow-test {
-                     display: grid;
-                  
-                     grid-template-columns: 20% 60% 20%;
-                     grid-template-rows: 10em 10em 10em;
-                  }</pre>
+               #columnrow-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: 20% 60% 20%; <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: 10em 10em 10em; <br>
+               }
             </code>
             <div id="columnrow-test" class="container">
                <div>1</div>
@@ -298,14 +295,13 @@
                Podemos usar un espaciado entre los elementos del Grid Layout para dar una mejor estetica y diseño.
             </p>
             <code>
-               <pre>
-                  #gap-test {
-                     display: grid;
-                  
-                     grid-template-columns: 20% 20% 20%;
-                     grid-template-rows: 5em 5em 5em;
-                     grid-gap: 1em;
-                  }</pre>
+               #gap-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: 20% 20% 20%; <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: 5em 5em 5em; <br>
+                  <span style="margin-left: 1em"></span>grid-gap: 1em; <br>
+               }
             </code>
             <div id="gap-test" class="container">
                <div>1</div>
@@ -331,13 +327,12 @@
                y se da 2 partes a la columna o fila del centro.
             </p>
             <code>
-               <pre>
-                  #fr-test {
-                     display: grid;
-                  
-                     grid-template-columns: 1fr 2fr 1fr;
-                     grid-template-rows: 2fr 1fr 2fr;
-                  }</pre>
+               #fr-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: 1fr 2fr 1fr; <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: 2fr 1fr 2fr; <br>
+               }
             </code>
             <div id="fr-test" class="container">
                <div>1</div>
@@ -359,21 +354,19 @@
                adapte a el dispositivo, para hacer que las columnas y filas se adapten, podemos usar esta funcion.
             </p>
             <code>
-               <pre>
-                  minmax(<"Valor Minimo">, <"Valor Máximo">)</pre>
+               minmax(<"Valor Minimo">, <"Valor Máximo">)
             </code>
             <h4 id="ClasesGrid-SegundaClase_MinMax">MinMax()</h4>
                <p>
                Ejemplo de esto:
             </p>
             <code>
-               <pre>
-                  #minmax-test {
-                     display: grid;
-                  
-                     grid-template-columns: 1fr minmax(1em, 2fr) 1fr;
-                     grid-template-rows: minmax(1em, 2fr) 1fr minmax(1em, 2fr);
-                  }</pre>
+               #minmax-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: 1fr minmax(1em, 2fr) 1fr; <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: minmax(1em, 2fr) 1fr minmax(1em, 2fr); <br>
+               }
             </code>
             <div id="minmax-test" class="container">
                <div>1</div>
@@ -393,13 +386,12 @@
                el espacio que use el <i>BoxModel</i> del Elemento. 
             </p>
             <code>
-               <pre>
-                  #minmaxauto-test {
-                     display: grid;
-                  
-                     grid-template-columns: minmax(auto, 1fr) 1fr 1fr;
-                     grid-template-columns: minmax(auto, 1fr) 1fr 1fr;
-                  }</pre>
+               #minmaxauto-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: minmax(auto, 1fr) 1fr 1fr; <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: minmax(auto, 1fr) 1fr 1fr; <br>
+               }
             </code>
             <div id="minmaxauto-test" class="container">
                <div>Lorem ipsum dolor sit amet.</div>
@@ -434,12 +426,11 @@
 
             <h4 id="ClasesGrid-TerceraClase_Repeat">Repeat()</h4>
             <code>
-               <pre>
-                  #repeat-test {
-                     display: grid;
-                  
-                     grid-template-columns: auto repeat(3, 1fr) auto;
-                  }</pre>
+               #repeat-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: auto repeat(3, 1fr) auto; <br>
+               }
             </code>
             <div id="repeat-test" class="container">
                <div>1</div>
@@ -477,14 +468,13 @@
                suficiente para manipular los elementos de una manera comoda.
             </p>
             <code>
-               <pre>
-                  #bienPosicionamiento-test {
-                     display: grid;
-                  
-                     grid-template-columns: repeat(3, auto);
-                     grid-template-rows: repeat(5, 5em);
-                     grid-gap: 1em;
-                  }</pre>
+               #bienPosicionamiento-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: repeat(3, auto); <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: repeat(5, 5em); <br>
+                  <span style="margin-left: 1em"></span>grid-gap: 1em; <br>
+               }
             </code>
             <div id="bienPosicionamiento-test" class="container">
                <div>1</div>
@@ -506,14 +496,13 @@
                Cosa no aconsejable por ahora.
             </p>
             <code>
-               <pre>
-                  #malPosicionamiento-test {
-                     display: grid;
-                  
-                     grid-template-columns: repeat(3, 1fr);
-                     grid-template-rows: repeat(4, 5em);
-                     grid-gap: 1em;
-                  }</pre>
+               #malPosicionamiento-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: repeat(3, 1fr); <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: repeat(4, 5em); <br>
+                  <span style="margin-left: 1em"></span>grid-gap: 1em; <br>
+               }
             </code>
             <div id="malPosicionamiento-test" class="container">
                <div>1</div>
@@ -539,21 +528,20 @@
                Para Posicionar los elementos en columnas, debemos tener un espacio libre en columnas o filas. Ejemplo:
             </p>
             <code>
-               <pre>
-                  #posicionamientoColumnas_1-test {
-                     display: grid;
-                  
-                     grid-template-columns: repeat(3, 1fr);
-                     grid-template-rows: repeat(5, 5em);
-                     grid-gap: 1em;
-                  
-                     #item1 {
-                     background-color: darkgreen;
-                     grid-column-start: 2;
-                     grid-column-end: 3;
-                     }
-                  }</pre>
-            </code>
+               #posicionamientoColumnas_1-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: repeat(3, 1fr); <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: repeat(5, 5em); <br>
+                  <span style="margin-left: 1em"></span>grid-gap: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>#item1 { <br>
+                  <span style="margin-left: 2em">background-color: darkgreen; <br>
+                  <span style="margin-left: 2em">grid-column-start: 2; <br>
+                  <span style="margin-left: 2em">grid-column-end: 3; <br>
+               <span style="margin-left: 1em">} <br>
+               }
+         </code>
             <div id="posicionamientoColumnas_1-test" class="container">
                <div id="item1">1</div>
                <div id="item2">2</div>
@@ -579,20 +567,19 @@
                o más deberiamos tener 3 o más Grid Lines.
             </p>
             <code>
-               <pre>
-                  #posicionamientoColumnas_2-test {
-                     display: grid;
+               #posicionamientoColumnas_2-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: repeat(3, 1fr); <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: repeat(5, 5em); <br>
+                  <span style="margin-left: 1em"></span>grid-gap: 1em; <br>
                   
-                     grid-template-columns: repeat(3, 1fr);
-                     grid-template-rows: repeat(5, 5em);
-                     grid-gap: 1em;
-                     
-                     #item1 {
-                     background-color: darkgreen;
-                     grid-column-start: 1;
-                     grid-column-end: 4;
-                     }
-                  }</pre>
+                  <span style="margin-left: 1em"></span>#item1 { <br>
+                  <span style="margin-left: 2em">background-color: darkgreen; <br>
+                  <span style="margin-left: 2em">grid-column-start: 1; <br>
+                  <span style="margin-left: 2em">grid-column-end: 4; <br>
+                  <span style="margin-left: 1em"></span>} <br>
+               }
             </code>
             <div id="posicionamientoColumnas_2-test" class="container">
                <div id="item1">1</div>
@@ -619,20 +606,19 @@
                y pudiendose combinar entre ambos. Se puede modificar el BoxModel del elemento y su posicionamiento, entre otros.
             </p>
             <code>
-               <pre>
-                  #posicionamientoFilas_1-test {
-                     display: grid;
-                     
-                     grid-template-columns: repeat(4, 1fr);
-                     grid-template-rows: repeat(3, 5em);
-                     grid-gap: 1em;
-                     
-                     #item1 {
-                     background-color: darkgreen;
-                     grid-row-start: 2;
-                     grid-row-end: 3;
-                     }
-                  }</pre>
+               #posicionamientoFilas_1-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: repeat(4, 1fr); <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em"></span>grid-gap: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>#item1 { <br>
+                  <span style="margin-left: 2em">background-color: darkgreen; <br>
+                  <span style="margin-left: 2em">grid-row-start: 2; <br>
+                  <span style="margin-left: 2em">grid-row-end: 3; <br>
+                  <span style="margin-left: 1em">} <br>
+               } <br>
             </code>
             <div id="posicionamientoFilas_1-test" class="container">
                <div id="item1">1</div>
@@ -646,20 +632,19 @@
             </div>
 
             <code>
-               <pre>
-                  #posicionamientoFilas_2-test {
-                     display: grid;
-                     
-                     grid-template-columns: repeat(4, 1fr);
-                     grid-template-rows: repeat(3, 5em);
-                     grid-gap: 1em;
-                     
-                     #item1 {
-                     background-color: darkgreen;
-                     grid-row-start: 1;
-                     grid-row-end: 4;
-                     }
-                  }</pre>
+               #posicionamientoFilas_2-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: repeat(4, 1fr); <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em"></span>grid-gap: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>#item1 { <br>
+                  <span style="margin-left: 2em">background-color: darkgreen; <br>
+                  <span style="margin-left: 2em">grid-row-start: 1; <br>
+                  <span style="margin-left: 2em">grid-row-end: 4; <br>
+                  <span style="margin-left: 1em"></span>} <br>
+               }
             </code>
             <div id="posicionamientoFilas_2-test" class="container">
                <div id="item1">1</div>
@@ -677,23 +662,22 @@
                Se puede usar este atributo para usar en las columnas o en las filas, para definir cuantas Grid cells ocupe. 
             </p>
             <code>
-               <pre>
-                  #span-test {
-                     display: grid;
-                  
-                     grid-template-columns: repeat(8, 1fr);
-                     grid-template-rows: repeat(2, 5em);
-                     grid-gap: 1em;
-                  
-                     #item1 {
-                     background-color: darkgreen;
-                     grid-column-start: 1;
-                     grid-column-end: span 6;
-                     
-                     grid-row-start: 2;
-                     grid-row-end: span 2;
-                     }
-                  }</pre>
+               #span-test { <br>
+                  <span style="margin-left: 1em"></span>display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>grid-template-columns: repeat(8, 1fr); <br>
+                  <span style="margin-left: 1em"></span>grid-template-rows: repeat(2, 5em); <br>
+                  <span style="margin-left: 1em"></span>grid-gap: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em"></span>#item1 { <br>
+                  <span style="margin-left: 2em">background-color: darkgreen; <br>
+                  <span style="margin-left: 2em">grid-column-start: 1; <br>
+                  <span style="margin-left: 2em">grid-column-end: span 6; <br>
+                  <br>
+                  <span style="margin-left: 2em">grid-row-start: 2; <br>
+                  <span style="margin-left: 2em">grid-row-end: span 2; <br>
+                  <span style="margin-left: 1em"></span>} <br>
+               }
             </code>
             <div id="span-test" class="container">
                <div id="item1">1</div>
@@ -732,28 +716,28 @@
                introducir los nombres y Grid Cells que va a ocupar cada area, ejemplo:
             </p>
             <code>
-               <pre>
-                  /* Tenemos una cuadricula con 4 columnas y 3 filas */
-                  grid-template-areas: "header header header header" /* Un header de 4 columnas y una fila */
-                                       "aside  main   main   nav" /* Un aside de una columna y una fila, un nav igual y un main con dos columnas. */
-                                       "footer footer footer footer" /* Un footer de 4 columnas y una fila */
-               </pre>
+               /* Tenemos una cuadricula con 4 columnas y 3 filas */
+               <br>
+               grid-template-areas: <br>
+               <span style="margin-left: 8em">"header header header header" /* Un header de 4 columnas */ <br>
+               <span style="margin-left: 8em">"aside  main   main   nav" /* Un aside y nav de 1 columna y un main de 2 */ <br>
+               <span style="margin-left: 8em">"footer footer footer footer"; /* Un footer de 4 columnas */ <br>
             </code>
             <p>
                Ahora con las areas definidas podemos usar <strong>grid-area</strong> o los mil y un formas sin shortcut que hay para asignar un elemento a esa area.
                Lo mejor de esto, es que en el html no es necesario tener los elementos en orden, solo un style que los asigne a el area y ya! Ejemplo de Areas.
             </p>
             <code>
-               <pre>
-                  #GridArea_1-test {
-                     display: grid;
-                  
-                     grid-template-rows: repeat(3, 1fr);
-                     grid-template-rows: repeat(3, 5em);
-                     grid-template-areas: "header header header"
-                                          "aside  main   nav"
-                                          "footer footer footer";
-                  }</pre>
+               #GridArea_1-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em">grid-template-areas: <br>
+                     <span style="margin-left: 13em">"header header header" <br>
+                     <span style="margin-left: 13em">"aside  main   nav" <br>
+                     <span style="margin-left: 13em">"footer footer footer"; <br>
+               }
             </code>
             <div class="container" id="GridArea_1-test">
                <div id="item1">Header</div>
@@ -767,22 +751,22 @@
                Pero no tienen ninguno de los Grid Items asignados, así que de poco sirven, pero este sería el resultado con los Grid Items asignados.
             </p>
             <code>
-               <pre>
-                  #GridArea_2-test {
-                     display: grid;
-                  
-                     grid-template-rows: repeat(3, 1fr);
-                     grid-template-rows: repeat(3, 5em);
-                     grid-template-areas: "header header header"
-                                          "aside  main   nav"
-                                          "footer footer footer";
-                  
-                     #item1 { grid-area: header; }
-                     #item2 { grid-area: aside; }
-                     #item3 { grid-area: main; }
-                     #item4 { grid-area: nav; }
-                     #item5 { grid-area: footer}
-                  }</pre>
+               #GridArea_2-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em">grid-template-areas: <br>
+                  <span style="margin-left: 14em">"header header header" <br>
+                  <span style="margin-left: 14em">"aside  main   nav" <br>
+                  <span style="margin-left: 14em">"footer footer footer"; <br>
+                  <br>
+                  <span style="margin-left: 1em">#item1 { grid-area: header; } <br>
+                  <span style="margin-left: 1em">#item2 { grid-area: aside; } <br>
+                  <span style="margin-left: 1em">#item3 { grid-area: main; } <br>
+                  <span style="margin-left: 1em">#item4 { grid-area: nav; } <br>
+                  <span style="margin-left: 1em">#item5 { grid-area: footer; } <br>
+               }
             </code>
             <div id="GridArea_2-test" class="container">
                <div id="item1">Header</div>
@@ -858,19 +842,18 @@
                Ejemplo de todas las propiedades con justify-self y align-self.
             </p>
             <code>
-               <pre>
-                  #alignItems-test {
-                     display: grid;
-                  
-                     grid-gap: 20px;
-                     grid-template-columns: repeat(2, 1fr);
-                     grid-template-rows: repeat(2, 10em);
-                  
-                     #item-start { justify-self: start; align-self: start; }
-                     #item-end { justify-self: end; align-self: end; }
-                     #item-stretch { justify-self: auto; align-self: stretch; }
-                     #item-center { justify-self: center; align-self: center; }
-                  }</pre>
+               #alignItems-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 20px; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(2, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(2, 10em); <br>
+                  <br>
+                  <span style="margin-left: 1em">#item-start { justify-self: start; align-self: start; } <br>
+                  <span style="margin-left: 1em">#item-end { justify-self: end; align-self: end; } <br>
+                  <span style="margin-left: 1em">#item-stretch { justify-self: auto; align-self: stretch; } <br>
+                  <span style="margin-left: 1em">#item-center { justify-self: center; align-self: center; } <br>
+               }
             </code>
 
             <div id="alignItems-test" class="container">
@@ -947,20 +930,19 @@
             </p>
             <h4>Start</h4>
             <code>
-               <pre>
-                  #alignTrack_start-test {
-                     width: 30em;
-                     height: 30em;
-                  
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: repeat(3, 5em);
-                     grid-template-rows: repeat(3, 5em);
-                  
-                     justify-content: start;
-                     align-content: start;
-                  }</pre>
+               #alignTrack_start-test { <br>
+                  <span style="margin-left: 1em">width: 30em; <br>
+                  <span style="margin-left: 1em">height: 30em; <br>
+                  <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 5em); <br>
+                  <br>
+                  <span style="margin-left: 1em">justify-content: start; <br>
+                  <span style="margin-left: 1em">align-content: start; <br>
+               }
             </code>
             <div id="alignTrack_start-test" class="container">
                <div>1</div>
@@ -976,20 +958,19 @@
 
             <h4>End</h4>
             <code>
-               <pre>
-                  #alignTrack_end-test {
-                     width: 30em;
-                     height: 30em;
-                  
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: repeat(3, 5em);
-                     grid-template-rows: repeat(3, 5em);
-                  
-                     justify-content: end;
-                     align-content: end;
-                  }</pre>
+               #alignTrack_end-test { <br>
+                  <span style="margin-left: 1em">width: 30em; <br>
+                  <span style="margin-left: 1em">height: 30em; <br>
+                  <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 5em); <br>
+                  <br>
+                  <span style="margin-left: 1em">justify-content: end; <br>
+                  <span style="margin-left: 1em">align-content: end; <br>
+               }
             </code>
             <div id="alignTrack_end-test" class="container">
                <div>1</div>
@@ -1005,20 +986,19 @@
 
             <h4>Center</h4>
             <code>
-               <pre>
-                  #alignTrack_center-test {
-                     width: 30em;
-                     height: 30em;
-                  
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: repeat(3, 5em);
-                     grid-template-rows: repeat(3, 5em);
-                  
-                     justify-content: center;
-                     align-content: center;
-                  }</pre>
+               #alignTrack_center-test { <br>
+                  <span style="margin-left: 1em">width: 30em; <br>
+                  <span style="margin-left: 1em">height: 30em; <br>
+                  <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 5em); <br>
+                  <br>
+                  <span style="margin-left: 1em">justify-content: center; <br>
+                  <span style="margin-left: 1em">align-content: center; <br>
+               }
             </code>
             <div id="alignTrack_center-test" class="container">
                <div>1</div>
@@ -1034,20 +1014,19 @@
 
             <h4>Space-Around</h4>
             <code>
-               <pre>
-                  #alignTrack_spaceAround-test {
-                     width: 30em;
-                     height: 30em;
-                  
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: repeat(3, 5em);
-                     grid-template-rows: repeat(3, 5em);
-                  
-                     justify-content: space-around;
-                     align-content: space-around;
-                  }</pre>
+               #alignTrack_spaceAround-test { <br>
+                  <span style="margin-left: 1em">width: 30em; <br>
+                  <span style="margin-left: 1em">height: 30em; <br>
+                  <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 5em); <br>
+                  <br>
+                  <span style="margin-left: 1em">justify-content: space-around; <br>
+                  <span style="margin-left: 1em">align-content: space-around; <br>
+               }
             </code>
             <div id="alignTrack_spaceAround-test" class="container">
                <div>1</div>
@@ -1063,20 +1042,19 @@
 
             <h4>Space-Between</h4>
             <code>
-               <pre>
-                  #alignTrack_spaceBetween-test {
-                     width: 30em;
-                     height: 30em;
-                  
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: repeat(3, 5em);
-                     grid-template-rows: repeat(3, 5em);
-                  
-                     justify-content: space-between;
-                     align-content: space-between;
-                  }</pre>
+               #alignTrack_spaceBetween-test { <br>
+                  <span style="margin-left: 1em">width: 30em; <br>
+                  <span style="margin-left: 1em">height: 30em; <br>
+                  <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 5em); <br>
+                  <br>
+                  <span style="margin-left: 1em">justify-content: space-between; <br>
+                  <span style="margin-left: 1em">align-content: space-between; <br>
+               }
             </code>
             <div id="alignTrack_spaceBetween-test" class="container">
                <div>1</div>
@@ -1092,21 +1070,19 @@
 
             <h4>Space-Evenly</h4>
             <code>
-               <pre>
-                  #alignTrack_spaceEvenly-test {
-                     width: 30em;
-                     height: 30em;
-                  
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: repeat(3, 5em);
-                     grid-template-rows: repeat(3, 5em);
-                  
-                     justify-content: space-evenly;
-                     align-content: space-evenly;
-                  }
-               </pre>
+               #alignTrack_spaceEvenly-test { <br>
+                  <span style="margin-left: 1em">width: 30em; <br>
+                  <span style="margin-left: 1em">height: 30em; <br>
+                  <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(3, 5em); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, 5em); <br>
+                  <br>
+                  <span style="margin-left: 1em">justify-content: space-evenly; <br>
+                  <span style="margin-left: 1em">align-content: space-evenly; <br>
+               }
             </code>
             <div id="alignTrack_spaceEvenly-test" class="container">
                <div>1</div>
@@ -1136,15 +1112,15 @@
                del Grid Layout. Podemos definir el tamaño de la columna o fila en la que se va a guardar este nuevo elemento. Ejemplo
             </p>
             <code>
-               <pre>
-                  #gridAuto-test {
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: 1fr 1fr 1fr;
-                     grid-template-rows: 5em 3em 5em;
-                     grid-auto-rows: 10em; /* Tamaño para los Hellos en las nuevas Rows */
-                  }</pre>
+               #gridAuto-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: 1fr 1fr 1fr; <br>
+                  <span style="margin-left: 1em">grid-template-rows: 5em 3em 5em; <br>
+                  <span style="margin-left: 1em">/* Tamaño para los "Hellos" en las nuevas Rows */ <br>
+                  <span style="margin-left: 1em">grid-auto-rows: 10em;  <br>
+               }
             </code>
             <div id="gridAuto-test" class="container">
                <div>1</div>
@@ -1211,13 +1187,12 @@
                Ejemplo de <strong>autofill</strong>, debes usar la consola de desarrollador para ver como cambia con diferentes pantallas.
             </p>
             <code>
-               <pre>
-                  #autofill-test {
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: repeat(auto-fill, minmax(2em, 1fr));
-                  }</pre>
+               #autofill-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(auto-fill, minmax(2em, 1fr)); <br>
+               }
             </code>
             <div id="autofill-test" class="container">
                <div>1</div>
@@ -1237,19 +1212,19 @@
                Boxmodel del elemento, crea una fila o columna nueva y los organiza ahí los que no entran.
             </p>
             <code>
-               gris-template-columns/rows: repeat(auto-fit, <"Tamaño de la columna/fila">) /* Preferiblemente con un minmax() */
+               gris-template-columns/rows: repeat(auto-fit, <"Tamaño de la columna/fila">) <br>
+               /* Preferiblemente con un minmax() */
             </code>
             <p>
                Ejemplo de <strong>autofit</strong>, debes usar la consola de desarrollador para ver como cambia con diferentes pantallas.
             </p>
             <code>
-               <pre>
-                  #autofit-test {
-                     display: grid;
-                  
-                     grid-gap: 1em;
-                     grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
-                  }</pre>
+               #autofit-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(auto-fit, minmax(2em, 1fr)); <br>
+               }
             </code>
             <div id="autofit-test" class="container">
                <div>1</div>
@@ -1285,52 +1260,51 @@
                Un Ejemplo de donde podemos inicar es: 
             </p>
             <code>
-               <pre>
-                  #subgrid_1-test {
-                     border: 0.1em solid #ccc;
-                     padding: 1em;
-                  
-                     background-color: #efefef;
-                  
-                     display: grid;
-                     grid-template-columns: repeat(2, 1fr);
-                     grid-gap: 1em;
-                  
-                     .publicacion {
-                        background-color: #fefefe;
-                        padding: 0.5em;
-                  
-                        .title {
-                           font: 800 1.5em 'Roboto Mono', monospace;
-                        }
+               #subgrid_1-test { <br>
+                  <span style="margin-left: 1em">border: 0.1em solid #ccc; <br>
+                  <span style="margin-left: 1em">padding: 1em; <br>
+               
+                  <span style="margin-left: 1em">background-color: #efefef; <br>
+               
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(2, 1fr); <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em">.publicacion { <br>
+                     <span style="margin-left: 2em">background-color: #fefefe; <br>
+                     <span style="margin-left: 2em">padding: 0.5em; <br>
+               
+                     <span style="margin-left: 2em">.title { <br>
+                        <span style="margin-left: 3em">font: 800 1.5em 'Roboto Mono', monospace; <br>
+                     <span style="margin-left: 2em">} <br>
 
-                        .texto {
-                           font: 500 1em 'Roboto', sans-serif;
-                        }
-                     
-                        .data-articulo {
-                        
-                           button {
-                              border: none;
-                        
-                              background-color: inherit;
-                        
-                              font: 800 0.8em 'Roboto', sans-serif;
-                        
-                              span.comentario {
-                                 text-decoration: underline solid #555 0.2em;
-                              }
-                              span.likes {
-                                 text-decoration: underline solid #c00 0.2em;
-                              }
-
-                              span.retweets {
-                                 text-decoration: underline solid #0df 0.2em;
-                              }
-                           }
-                        }
-                     }
-                  }</pre>
+                     <span style="margin-left: 2em">.texto { <br>
+                        <span style="margin-left: 3em">font: 500 1em 'Roboto', sans-serif; <br>
+                     <span style="margin-left: 2em">} <br>
+                     <br>
+                     <span style="margin-left: 2em">.data-articulo { <br>
+                     <br>
+                        <span style="margin-left: 3em">button { <br>
+                           <span style="margin-left: 4em">border: none; <br>
+                           <br>
+                           <span style="margin-left: 4em">background-color: inherit; <br>
+                           <br>
+                           <span style="margin-left: 4em">font: 800 0.8em 'Roboto', sans-serif; <br>
+                           <br>
+                           <span style="margin-left: 4em">span.comentario { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #555 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                           <span style="margin-left: 4em">span.likes { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #c00 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                           <br>
+                           <span style="margin-left: 4em">span.retweets { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #0df 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                        <span style="margin-left: 3em">} <br>
+                     <span style="margin-left: 2em">} <br>
+                  <span style="margin-left: 1em">} <br>
+               } <br>
             </code>
             <div id="subgrid_1-test">
                <div class="publicacion">
@@ -1380,14 +1354,12 @@
                Vamos a intentar organizar las filas de cada Grid Item, y para esto vamos a definir las filas dentro de las publicaciones así:
             </p>
             <code>
-               <pre>
-                  #subgrid-test {
-                     display: grid;
-
-                     grid-template-columns: repeat(2, 1fr);
-                     grid-template-rows: repeat(1, auto 1fr auto)
-                  }
-               </pre>
+               #subgrid-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(2, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(1, auto 1fr auto) <br>
+               }
             </code>
             <p>
                Esto hara que las filas extra siempre sean de 3 filas, es decir las filas que necesitamos que se usen dentro del Grid Items. <strong>Pero esto no va a romper 
@@ -1395,103 +1367,96 @@
                Ejemplo: 
             </p>
             <code>
-               <pre>
-                  #subgrid-test {
-                     display: grid;
-                     
-                     grid-template-columns: repeat(2, 1fr);
-                     grid-template-rows: repeat(3, auto 1fr auto)
-
-                     .publicacion {
-                        grid-rows: span 3;
-                     }
-                  }
-               </pre>
+               #subgrid-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(2, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(3, auto 1fr auto) <br>
+                  <br>
+                  <span style="margin-left: 1em">.publicacion { <br>
+                     <span style="margin-left: 2em">grid-rows: span 3; <br>
+                  <span style="margin-left: 1em">} <br>
+               }
             </code>
             <p>
                <strong>Pero todavía no sean organizado los contenidos del Grid Item!</strong> Perate', ahora vamos a voler estos Grid Items un <strong>display: grid;</strong>
                Para que pueda tomar los valores del <strong>SubGrid</strong>, para esto si estamos en <mark>FireFox</mark>, simplemente debemos agregar: 
             </p>
             <code>
-               <pre>
-                  .publicacion {
-                     display: grid;
-
-                     grid-row: span 3;
-                     grid-template-rows: subgrid;
-                  }
-               </pre>
+               .publicacion { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-row: span 3; <br>
+                  <span style="margin-left: 1em">grid-template-rows: subgrid; <br>
+               }
             </code>
             <p>
                Para que funcione en todos los navegadores, vamos a tener que agregar otro valor de <strong>grid-template-rows: </strong>, siendo este:
             </p>
             <code>
-               <pre>
-                  .publicacion {
-                     display: grid; 
-                     
-                     grid-row: span 3;
-                     grid-template-rows: auto 1fr auto; /* El mismo valor que en el Grid Container */
-                     grid-template-rows: subgrid; /* Valor para los usuarios de FireFox */
-                  }
-               </pre>
+               .publicacion { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-row: span 3; <br>
+                  <span style="margin-left: 1em">grid-template-rows: auto 1fr auto; /* El mismo valor que en el Grid Container */ <br>
+                  <span style="margin-left: 1em">grid-template-rows: subgrid; /* Valor para los usuarios de FireFox */ <br>
+               }
             </code>
             <p>
                Listo!!! Ahora veamos como sería todo el ejemplo de como se organizan las filas dentro del Grid Item usando SubGrid. 
             </p>
             <code>
-               <pre>
-                  #subgrid_2-test {
-                     border: 0.1em solid #ccc;
-                     padding: 1em;
-                  
-                     background-color: #efefef;
-                  
-                     display: grid;
-                     grid-template-columns: repeat(2, 1fr);
-                     grid-template-rows: repeat(1, auto 1fr auto);
-                     grid-gap: 1em;
-                  
-                     .publicacion {
-                        padding: 0.5em;
-                  
-                        background-color: #fefefe;
-                     
-                        display: grid;
-                     
-                        grid-row: span 3;
-                        grid-template-rows: auto 1fr auto;
-                        grid-template-rows: subgrid; /* Fire Fox Browsers Only */
-                     
-                        .title {
-                           font: 800 1.2em 'Roboto Mono', monospace;
-                        }
-                        .texto {
-                           font: 500 1em 'Roboto', sans-serif;
-                        }
-                  
-                        .data-articulo {
-                     
-                           button {
-                              border: none;
-                  
-                              background-color: inherit;
-                  
-                              font: 800 0.8em 'Roboto', sans-serif;
-                        
-                              span.comentario {
-                                 text-decoration: underline solid #555 0.2em;
-                              }
-                              span.likes {
-                                 text-decoration: underline solid #c00 0.2em;
-                              }
-                              span.retweets {
-                                 text-decoration: underline solid #0df 0.2em;
-                              }
-                           }
-                        }
-                     }
-                  }</pre>
+               #subgrid_2-test { <br>
+                  <span style="margin-left: 1em">border: 0.1em solid #ccc; <br>
+                  <span style="margin-left: 1em">padding: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em">background-color: #efefef; <br>
+                  <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(2, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(1, auto 1fr auto); <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em">.publicacion { <br>
+                     <span style="margin-left: 2em">padding: 0.5em; <br>
+                     <br>
+                     <span style="margin-left: 2em">background-color: #fefefe; <br>
+                     <br>
+                     <span style="margin-left: 2em">display: grid; <br>
+                     <br>
+                     <span style="margin-left: 2em">grid-row: span 3; <br>
+                     <span style="margin-left: 2em">grid-template-rows: auto 1fr auto; <br>
+                     <span style="margin-left: 2em">grid-template-rows: subgrid; /* Fire Fox Browsers Only */ <br>
+                     <br>
+                     <span style="margin-left: 2em">.title { <br>
+                        <span style="margin-left: 3em">font: 800 1.2em 'Roboto Mono', monospace; <br>
+                     <span style="margin-left: 2em">} <br>
+                     <span style="margin-left: 2em">.texto { <br>
+                        <span style="margin-left: 3em">font: 500 1em 'Roboto', sans-serif; <br>
+                     <span style="margin-left: 2em">} <br>
+                     <br>
+                     <span style="margin-left: 2em">.data-articulo { <br>
+                        <br>
+                        <span style="margin-left: 3em">button { <br>
+                           <span style="margin-left: 4em">border: none; <br>
+                           <br>
+                           <span style="margin-left: 4em">background-color: inherit; <br>
+                           <br>
+                           <span style="margin-left: 4em">font: 800 0.8em 'Roboto', sans-serif; <br>
+                           <br>
+                           <span style="margin-left: 4em">span.comentario { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #555 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                           <span style="margin-left: 4em">span.likes { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #c00 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                           <span style="margin-left: 4em">span.retweets { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #0df 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                        <span style="margin-left: 3em">} <br>
+                     <span style="margin-left: 2em">} <br>
+                  <span style="margin-left: 1em">} <br>
+               }
             </code>
             <div id="subgrid_2-test">
                <div class="publicacion">
@@ -1545,167 +1510,155 @@
                Podemos definirlas de esta forma:
             </p>
             <code>
-               <pre>
-                  #subgrid-test {
-                     display: grid;
-
-                     grid-template-columns: repeat(6, 1fr);
-                     grid-template-rows: repeat(1, auto 1fr auto);
-                  }
-               </pre>
+               #subgrid-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(6, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(1, auto 1fr auto); <br>
+               }
             </code>
             <p>
                Como con las filas, esto va a romper a los Grid Items, para evitar esto, vamos a decirles que ocupen con un <strong>span</strong> 3 o las 
                columnas necesitadas por cada Grid Item.
             </p>
             <code>
-               <pre>
-                  #subgrid-test {
-                     display: grid;
-         
-                     grid-template-columns: repeat(6, 1fr);
-                     grid-template-rows: repeat(1, auto 1fr auto);
-
-                     .publicaciones {
-                        grid-column: span 3;
-                     }
-                  }
-               </pre>
+               #subgrid-test { <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(6, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(1, auto 1fr auto); <br>
+                  <br>
+                  <span style="margin-left: 1em">.publicaciones { <br>
+                     <span style="margin-left: 2em">grid-column: span 3; <br>
+                  <span style="margin-left: 1em">} <br>
+               }
             </code>
             <p>
                Listo, ahora vamos a organizar los elementos dentro del Grid Item, pero para esto vamos a modificar directamente los comentarios, likes y retweets, que 
                estan en un div.
             </p>
             <code>
-               <pre>
-                  .publicaciones {
-                     grid-column: span 3;
-
-                     .data-articulo {
-                        display: grid;
-
-                        grid-column: span 3;
-                        grid-template-columns: subgrid;
-                     }
-                  }
-               </pre>
+               .publicaciones { <br>
+                  <span style="margin-left: 1em">grid-column: span 3; <br>
+                  <br>
+                  <span style="margin-left: 1em">.data-articulo { <br>
+                     <span style="margin-left: 2em">display: grid; <br>
+                     <br>
+                     <span style="margin-left: 2em">grid-column: span 3; <br>
+                     <span style="margin-left: 2em">grid-template-columns: subgrid; <br>
+                  <span style="margin-left: 1em">} <br>
+               }
             </code>
             <p>
                Esto va a hacer que ahora los demas elementos como el titulo y el texto se rompan, para evitar esto, usamos el <strong>span</strong> para que cubran las 
                3 columnas. 
             </p>
             <code>
-               <pre>
-                  .publicaciones {
-                     grid-column: span 3;
-
-                     .title {
-                        grid-column: span 3;
-                     }
-
-                     .texto {
-                        grid-column: span 3;
-                     }
-         
-                     .data-articulo {
-                        display: grid;
-         
-                        grid-column: span 3;
-                        grid-template-columns: repeat(3, 1fr);
-                        grid-template-columns: subgrid;
-                     }
-                  }
-               </pre>
+               .publicaciones { <br>
+                  <span style="margin-left: 1em">grid-column: span 3; <br>
+                  <br>
+                  <span style="margin-left: 1em">.title { <br>
+                     <span style="margin-left: 2em">grid-column: span 3; <br>
+                  <span style="margin-left: 1em">} <br>
+                  <br>
+                  <span style="margin-left: 1em">.texto { <br>
+                     <span style="margin-left: 2em">grid-column: span 3; <br>
+                  <span style="margin-left: 1em">} <br>
+                  <br>
+                  <span style="margin-left: 1em">.data-articulo { <br>
+                     <span style="margin-left: 2em">display: grid; <br>
+                     <br>
+                     <span style="margin-left: 2em">grid-column: span 3; <br>
+                     <span style="margin-left: 2em">grid-template-columns: repeat(3, 1fr); <br>
+                     <span style="margin-left: 2em">grid-template-columns: subgrid; <br>
+                  <span style="margin-left: 1em">} <br>
+               }
             </code>
             <p>
                Pero de donde esta sacando el div de los comentarios, likes y retweets las columnas para alinearse? de hecho no lo esta haciendo, las definimos cómo las filas 
                en el Grid Item.
             </p>
             <code>
-               <pre>
-                  .publicaciones {
-                     /* Rows */
-                     grid-row: span 3;
-                     grid-template-rows: auto 1fr auto; /* Filas necesitadas en el Grid Item */
-                     grid-template-rows: subgrid; /* Subgrid para FireFox */
-
-                     /* Columns */
-                     grid-column: span 3;
-                     grid-template-columns: repeat(3, 1fr); /* Columnas necesitadas en el Grid Item */
-                     grid-template-columns: subgrid; /* Subgrid para FireFox */
-                  }
-               </pre>
+               .publicaciones { <br>
+                  <span style="margin-left: 1em">/* Rows */ <br>
+                  <span style="margin-left: 1em">grid-row: span 3; <br>
+                  <span style="margin-left: 1em">grid-template-rows: auto 1fr auto; /* Filas necesitadas en el Grid Item */ <br>
+                  <span style="margin-left: 1em">grid-template-rows: subgrid; /* Subgrid para FireFox */ <br>
+                  <br>
+                  <span style="margin-left: 1em">/* Columns */ <br>
+                  <span style="margin-left: 1em">grid-column: span 3; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(3, 1fr); /* Columnas necesitadas en el Grid Item */ <br>
+                  <span style="margin-left: 1em">grid-template-columns: subgrid; /* Subgrid para FireFox */ <br>
+               }
             </code>
             <p>
                Listo, otravez !!! ahora veamos como queda todo el contenido del Grid Item lo mayormente posible organizado en un navegador que no soporta SubGrid.
             </p>
             <code>
-               <pre>
-                  #subgrid_3-test {
-                     border: 0.1em solid #ccc;
-                     padding: 1em;
-                  
-                     background-color: #efefef;
-                  
-                     display: grid;
-                     grid-template-columns: repeat(6, 1fr);
-                     grid-template-rows: repeat(1, auto 1fr auto);
-                     grid-gap: 1em;
-                  
-                     .publicacion {
-                        padding: 0.5em;
-                  
-                        background-color: #fefefe;
-                     
-                        display: grid;
-                     
-                        grid-row: span 3;
-                        grid-template-rows: auto 1fr auto;
-                        grid-template-rows: subgrid;
-                     
-                        grid-column: span 3;
-                        grid-template-columns: repeat(3, 1fr);
-                        grid-template-columns: subgrid;
-                  
-                        .title {
-                           font: 800 1.2em 'Roboto Mono', monospace;
-                        
-                           grid-column: span 3;
-                        }
-                        .texto {
-                           font: 500 1em 'Roboto', sans-serif;
-                        
-                           grid-column: span 3;
-                        }
-                     
-                        .data-articulo {
-                           display: grid; 
-                        
-                           grid-column: span 3;
-                           grid-template-columns: repeat(3, 1fr);
-                           grid-template-columns: subgrid;
-                     
-                           button {
-                              border: none;
-                        
-                              background-color: inherit;
-                        
-                              font: 800 0.8em 'Roboto', sans-serif;
-                     
-                              span.comentario {
-                                 text-decoration: underline solid #555 0.2em;
-                              }
-                              span.likes {
-                                 text-decoration: underline solid #c00 0.2em;
-                              }
-                              span.retweets {
-                                 text-decoration: underline solid #0df 0.2em;
-                              }
-                           }
-                        }
-                     }
-                  }
-               </pre>
+               #subgrid_3-test { <br>
+                  <span style="margin-left: 1em">border: 0.1em solid #ccc; <br>
+                  <span style="margin-left: 1em">padding: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em">background-color: #efefef; <br>
+                  <br>
+                  <span style="margin-left: 1em">display: grid; <br>
+                  <span style="margin-left: 1em">grid-template-columns: repeat(6, 1fr); <br>
+                  <span style="margin-left: 1em">grid-template-rows: repeat(1, auto 1fr auto); <br>
+                  <span style="margin-left: 1em">grid-gap: 1em; <br>
+                  <br>
+                  <span style="margin-left: 1em">.publicacion { <br>
+                     <span style="margin-left: 2em">padding: 0.5em; <br>
+                     <br>
+                     <span style="margin-left: 2em">background-color: #fefefe; <br>
+                     <br>
+                     <span style="margin-left: 2em">display: grid; <br>
+                     <br>
+                     <span style="margin-left: 2em">grid-row: span 3; <br>
+                     <span style="margin-left: 2em">grid-template-rows: auto 1fr auto; <br>
+                     <span style="margin-left: 2em">grid-template-rows: subgrid; <br>
+                     <br>
+                     <span style="margin-left: 2em">grid-column: span 3; <br>
+                     <span style="margin-left: 2em">grid-template-columns: repeat(3, 1fr); <br>
+                     <span style="margin-left: 2em">grid-template-columns: subgrid; <br>
+                     <br>
+                     <span style="margin-left: 2em">.title { <br>
+                        <span style="margin-left: 3em">font: 800 1.2em 'Roboto Mono', monospace; <br>
+                        <br>
+                        <span style="margin-left: 3em">grid-column: span 3; <br>
+                     <span style="margin-left: 2em">} <br>
+                     <span style="margin-left: 2em">.texto { <br>
+                        <span style="margin-left: 3em">font: 500 1em 'Roboto', sans-serif; <br>
+                        <br>
+                        <span style="margin-left: 3em">grid-column: span 3; <br>
+                     <span style="margin-left: 2em">} <br>
+                     <br>
+                     <span style="margin-left: 2em">.data-articulo { <br>
+                        <span style="margin-left: 3em">display: grid; <br>
+                        <br>
+                        <span style="margin-left: 3em">grid-column: span 3; <br>
+                        <span style="margin-left: 3em">grid-template-columns: repeat(3, 1fr); <br>
+                        <span style="margin-left: 3em">grid-template-columns: subgrid; <br>
+                        <br>
+                        <span style="margin-left: 3em">button { <br>
+                           <span style="margin-left: 4em">border: none; <br>
+                           <br>
+                           <span style="margin-left: 4em">background-color: inherit; <br>
+                           <br>
+                           <span style="margin-left: 4em">font: 800 0.8em 'Roboto', sans-serif; <br>
+                           <br>
+                           <span style="margin-left: 4em">span.comentario { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #555 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                           <span style="margin-left: 4em">span.likes { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #c00 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                           <span style="margin-left: 4em">span.retweets { <br>
+                              <span style="margin-left: 5em">text-decoration: underline solid #0df 0.2em; <br>
+                           <span style="margin-left: 4em">} <br>
+                        <span style="margin-left: 3em">} <br>
+                     <span style="margin-left: 2em">} <br>
+                  <span style="margin-left: 1em">} <br>
+               }
             </code>
             <div id="subgrid_3-test">
                <div class="publicacion">
@@ -1778,10 +1731,9 @@
                Para ingresar un <strong>@media</strong> para el tamaño de la pantalla, se hace así:
             </p>
             <code>
-               <pre>
-                  @media screen and (max-width: /* Número o medida de la pantalla */) {
-                     /* Styles que vamos a usar o cambiar */
-                  }</pre>
+               @media screen and (max-width: /* Número o medida de la pantalla */) { <br>
+                  <span style="margin-left: 1em">/* Styles que vamos a usar o cambiar */ <br>
+               } <br> 
             </code>
             <p>
                Y como o que styles vamos a poner o cambiar en el <strong>@media</strong> para que nuestro Grid layout sea responsive? <strong>Vamos a cambiar a que el 
