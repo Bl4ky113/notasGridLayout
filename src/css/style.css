@@ -121,7 +121,7 @@ main section p {
   font: 500 1em "Roboto", sans-serif;
 }
 main section a {
-  margin: 1em 1.25em;
+  margin: 1em 0;
   color: #008800;
   font: 800 1.125em "Roboto", sans-serif;
   text-decoration: underline solid #008800 0.1em;
