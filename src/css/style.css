@@ -185,6 +185,7 @@ main section mark {
   background-color: rgba(121, 255, 121, 0.5);
 }
 main section div.container {
+  width: 90%;
   margin: 0.5em auto;
   border: 0.8em solid #005500;
 }

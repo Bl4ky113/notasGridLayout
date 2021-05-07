@@ -38,7 +38,7 @@
 
 #repeat-test {
   display: grid;
-  grid-template-columns: auto repeat(3, 1fr) auto;
+  grid-template-columns: auto repeat(2, 1fr) auto;
 }
 
 #bienPosicionamiento-test {
@@ -107,7 +107,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 5em);
-  grid-gap: 1em;
+  grid-gap: 0.25em;
 }
 #span-test #item1 {
   background-color: darkgreen;
@@ -148,7 +148,6 @@
 
 #alignItems-test {
   display: grid;
-  grid-gap: 1em;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 10em);
 }
@@ -170,7 +169,6 @@
 }
 
 #alignTrack_start-test {
-  width: 30em;
   height: 30em;
   display: grid;
   grid-gap: 1em;
@@ -181,7 +179,6 @@
 }
 
 #alignTrack_end-test {
-  width: 30em;
   height: 30em;
   display: grid;
   grid-gap: 1em;
@@ -192,7 +189,6 @@
 }
 
 #alignTrack_center-test {
-  width: 30em;
   height: 30em;
   display: grid;
   grid-gap: 1em;
@@ -203,7 +199,6 @@
 }
 
 #alignTrack_spaceAround-test {
-  width: 30em;
   height: 30em;
   display: grid;
   grid-gap: 1em;
@@ -214,7 +209,6 @@
 }
 
 #alignTrack_spaceBetween-test {
-  width: 30em;
   height: 30em;
   display: grid;
   grid-gap: 1em;
@@ -225,7 +219,6 @@
 }
 
 #alignTrack_spaceEvenly-test {
-  width: 30em;
   height: 30em;
   display: grid;
   grid-gap: 1em;
@@ -375,4 +368,18 @@
 }
 #subgrid_3-test .publicacion .data-articulo button span.retweets {
   text-decoration: underline solid #0df 0.2em;
+}
+
+@media screen and (max-width: 650px) {
+  #subgrid_1-test {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #subgrid_2-test {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #subgrid_3-test {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -243,6 +243,7 @@ main {
 
   /* Tests and Examples */
   div.container {
+   width: 90%;
    
    margin: 0.5em auto;
    border: 0.8em solid $color-darker;
@@ -362,6 +363,5 @@ footer {
 @media screen and (max-width: 650px) {
  .container {
   font-size: 12px;
-
  }
 }
